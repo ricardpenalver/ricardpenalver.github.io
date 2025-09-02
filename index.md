@@ -4,7 +4,7 @@ title: Inicio
 author_profile: true
 ---
 
-# ¡Hola! Soy Ricard Penalver
+# ¡Hola! Soy Ricardo Peñalver García
 
 Bienvenido a mi espacio personal donde comparto mis proyectos, pensamientos y experiencia profesional en el mundo de la tecnología.
 
