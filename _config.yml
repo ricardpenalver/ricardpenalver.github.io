@@ -1,0 +1,12 @@
+title: Tu Nombre
+description: Mi portfolio, blog y CV
+baseurl: ""
+url: "https://tu-usuario.github.io"
+
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
