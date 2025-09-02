@@ -1,4 +1,4 @@
-# Página Web Personal - Ricard Penalver
+# Página Web Personal - Ricardo Penalver
 
 ¡Bienvenido a mi página web personal! Este sitio está construido con Jekyll y alojado en GitHub Pages.
 
