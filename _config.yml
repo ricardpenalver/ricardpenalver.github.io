@@ -6,13 +6,14 @@ baseurl: ""
 url: "https://ricardpenalver.github.io"
 
 # Theme
-theme: minima
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
 # Plugins compatibles con GitHub Pages
 plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-remote-theme
 
 # Author
 author:
@@ -31,18 +32,68 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: post
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
   - scope:
       path: ""
       type: pages
     values:
-      layout: page
+      layout: single
+      author_profile: true
 
 # Pagination
 paginate: 5
 paginate_path: /blog/page:num/
 
-# Minima theme settings
-social_links:
-  github: ricardpenalver
-  email: ricard@example.com
+# Minimal Mistakes theme settings
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Site search
+search: true
+search_full_content: true
+
+# Comments
+comments:
+  provider: false # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+
+# Social sharing
+share: true
+share_on: # Twitter, Facebook, LinkedIn, Reddit, Telegram, WhatsApp
+
+# Reading time
+read_time: true
+
+# Table of contents
+toc: true
+toc_label: "En esta página"
+toc_icon: "list"
+
+# Related posts
+related: true
+related_posts_limit: 4
+
+# Navigation
+navigation:
+  - title: "Inicio"
+    url: /
+  - title: "Acerca de"
+    url: /about/
+  - title: "Proyectos"
+    url: /projects/
+  - title: "Blog"
+    url: /blog/
+  - title: "Contacto"
+    url: /contact/
+
+# Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ricardpenalver"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:ricard@example.com"

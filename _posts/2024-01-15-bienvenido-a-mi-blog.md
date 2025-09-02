@@ -4,7 +4,11 @@ date: 2024-01-15 10:00:00 +0100
 categories: [General]
 tags: [bienvenida, blog, tecnología]
 author: Ricard Penalver
-layout: post
+layout: single
+author_profile: true
+read_time: true
+share: true
+related: true
 ---
 
 # ¡Bienvenido a mi blog!

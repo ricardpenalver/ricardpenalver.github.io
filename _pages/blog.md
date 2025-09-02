@@ -1,19 +1,14 @@
 ---
-layout: page
+layout: archive
 title: "Blog"
 permalink: /blog/
+author_profile: true
 ---
 
-# Blog
-
-Aquí encontrarás mis últimas publicaciones sobre tecnología, desarrollo y experiencias profesionales.
+{% include base_path %}
 
 {% for post in site.posts %}
-  <article>
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
-    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-    <a href="{{ post.url }}">Leer más...</a>
-  </article>
-  <hr>
+  {% include archive-single.html %}
 {% endfor %}
+
+{% include paginator.html %}

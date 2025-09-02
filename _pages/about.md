@@ -1,7 +1,11 @@
 ---
-layout: page
+layout: single
 title: "Acerca de mí"
 permalink: /about/
+author_profile: true
+sidebar:
+  - title: "Información"
+    text: "Desarrollador apasionado por la tecnología"
 ---
 
 # Acerca de mí
