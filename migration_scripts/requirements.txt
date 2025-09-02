@@ -1,0 +1,5 @@
+# Requisitos para los scripts de migración
+requests>=2.25.0
+html2text>=2020.1.16
+beautifulsoup4>=4.9.0
+lxml>=4.6.0
