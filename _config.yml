@@ -8,11 +8,11 @@ url: "https://ricardpenalver.github.io"
 # Theme
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
-# Plugins (comentados temporalmente)
-# plugins:
-#   - jekyll-sitemap
-#   - jekyll-include-cache
-#   - jekyll-feed
+# Plugins compatibles con GitHub Pages
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
 
 # Author
 author:
@@ -42,9 +42,9 @@ defaults:
       layout: single
       author_profile: true
 
-# Pagination (comentado temporalmente)
-# paginate: 5
-# paginate_path: /blog/page:num/
+# Pagination
+paginate: 5
+paginate_path: /blog/page:num/
 
 # Minimal Mistakes theme settings
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
