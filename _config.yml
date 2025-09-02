@@ -6,7 +6,7 @@ baseurl: ""
 url: "https://ricardpenalver.github.io"
 
 # Theme
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+theme: minima
 
 # Plugins compatibles con GitHub Pages
 plugins:
@@ -31,69 +31,18 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      share: true
+      layout: post
   - scope:
       path: ""
       type: pages
     values:
-      layout: single
-      author_profile: true
+      layout: page
 
 # Pagination
 paginate: 5
 paginate_path: /blog/page:num/
 
-# Minimal Mistakes theme settings
-minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
-# Site search
-search: true # true, false (default)
-search_full_content: true
-
-# Comments
-comments:
-  provider: "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
-  disqus:
-    shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
-
-# Social sharing
-share: true # true (default), false
-share_on: # Twitter, Facebook, LinkedIn, Reddit, Telegram, WhatsApp
-
-# Reading time
-read_time: true
-
-# Table of contents
-toc: true
-toc_label: "En esta página"
-toc_icon: "list"
-
-# Related posts
-related: true
-related_posts_limit: 4
-
-# Navigation
-navigation:
-  - title: "Inicio"
-    url: /
-  - title: "Acerca de"
-    url: /about/
-  - title: "Proyectos"
-    url: /projects/
-  - title: "Blog"
-    url: /blog/
-  - title: "Contacto"
-    url: /contact/
-
-# Footer
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/ricardpenalver"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:ricard@example.com"
+# Minima theme settings
+social_links:
+  github: ricardpenalver
+  email: ricard@example.com
