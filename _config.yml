@@ -6,16 +6,13 @@ baseurl: ""
 url: "https://ricardpenalver.vercel.app"
 
 # Theme
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+theme: minimal-mistakes-jekyll
 
-# Plugins para Vercel (sin restricciones)
+# Plugins básicos para Vercel
 plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-remote-theme
-  - jekyll-include-cache
-  - jekyll-gfm
 
 # Jekyll configuration
 markdown: kramdown
