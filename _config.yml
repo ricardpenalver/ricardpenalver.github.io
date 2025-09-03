@@ -6,7 +6,7 @@ baseurl: ""
 url: "https://ricardpenalver.github.io"
 
 # Theme
-remote_theme: "mmistakes/minimal-mistakes@4.19.3"
+remote_theme: "mmistakes/minimal-mistakes@4.15.2"
 
 # Plugins compatibles con GitHub Pages
 plugins:
