@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Inicio
+title: "Ricard Penalver - Desarrollador"
 author_profile: true
 ---
 
