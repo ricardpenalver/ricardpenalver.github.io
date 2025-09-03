@@ -1,7 +1,11 @@
 ---
-layout: page
+layout: single
 title: "Contacto"
 permalink: /contact/
+author_profile: true
+sidebar:
+  - title: "Disponibilidad"
+    text: "Abierto a colaboraciones y proyectos"
 ---
 
 # Contacto

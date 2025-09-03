@@ -1,7 +1,11 @@
 ---
-layout: page
+layout: single
 title: "Proyectos"
 permalink: /projects/
+author_profile: true
+sidebar:
+  - title: "Tecnologías"
+    text: "React, Node.js, Python, JavaScript"
 ---
 
 # Mis Proyectos

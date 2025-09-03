@@ -1,0 +1,12 @@
+# Main navigation
+main:
+  - title: "Inicio"
+    url: /
+  - title: "Acerca de"
+    url: /about/
+  - title: "Proyectos"
+    url: /projects/
+  - title: "Blog"
+    url: /blog/
+  - title: "Contacto"
+    url: /contact/
