@@ -6,7 +6,7 @@ baseurl: ""
 url: "https://ricardpenalver.github.io"
 
 # Theme
-remote_theme: "daattali/beautiful-jekyll@latest"
+remote_theme: "daattali/beautiful-jekyll@5.0.0"
 
 # Plugins compatibles con GitHub Pages
 plugins:
