@@ -17,6 +17,13 @@ plugins:
   - jekyll-include-cache
   - jekyll-gfm
 
+# Jekyll configuration
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 # Author
 author:
   name: "Ricard Penalver"
