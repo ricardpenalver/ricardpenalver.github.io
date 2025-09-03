@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Valoración artistas VIVE LATINO 2025 - Ricard Penalver</title>
+<meta content="Valoración artistas VIVE LATINO 2025 - Desarrollador Full Stack" name="description"/>
+<link href="/styles.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar">
+<div class="nav-container">
+<a class="logo" href="/">Ricard Penalver</a>
+<ul class="nav-menu">
+<li><a class="nav-link" href="/">Inicio</a></li>
+<li><a class="nav-link" href="/pages/about.html">Sobre Mí</a></li>
+<li><a class="nav-link" href="/pages/projects.html">Proyectos</a></li>
+<li><a class="nav-link" href="/blog/">Blog</a></li>
+<li><a class="nav-link" href="/pages/contact.html">Contacto</a></li>
+</ul>
+<button class="mobile-menu-toggle">☰</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="main-content" style="margin-top: 80px; padding: 2rem 0;">
+<div class="container">
+<article class="content-article">
+<header class="article-header">
+<h1 class="article-title">Valoración artistas VIVE LATINO 2025</h1>
+</header>
+<div class="article-content">
+<!-- wp:html -->
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Archivo Excel Final - Vive Latino 2025</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .summary {
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #007bff;
+        }
+        
+        .summary h3 {
+            color: #007bff;
+            margin-top: 0;
+        }
+        
+        .download-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .download-btn {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(40,167,69,0.3);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40,167,69,0.4);
+        }
+        
+        .preview-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 12px;
+        }
+        
+        .preview-table th {
+            background: #007bff;
+            color: white;
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 11px;
+        }
+        
+        .preview-table td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+        
+        .preview-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .preview-table tr:hover {
+            background: #e3f2fd;
+        }
+        
+        .analysis-cell {
+            max-width: 250px;
+            line-height: 1.3;
+            font-size: 10px;
+        }
+        
+        .score-cell {
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .score-high { color: #28a745; }
+        .score-medium { color: #ffc107; }
+        .score-low { color: #dc3545; }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .stat-box {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1;
+            margin: 0 10px;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .features-list {
+            background: #d4edda;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .features-list h3 {
+            color: #155724;
+            margin-top: 0;
+        }
+        
+        .features-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features-list li {
+            padding: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .features-list li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<h1>📊 Archivo Excel Final - Vive Latino 2025</h1>
+<p class="subtitle">Versión completa con análisis críticos y valoraciones numéricas</p>
+<div class="summary">
+<h3>📋 Contenido del Archivo Final</h3>
+<p><strong>8 columnas totales:</strong> Grupo, Horario inicio, Escenario, Fecha, Opinión de la crítica, Valoración crítica (0-10), Sentimiento del público, Valoración del público (0-10)</p>
+<p><strong>Funcionalidades añadidas:</strong> Rankings, estadísticas, análisis comparativo por valoraciones numéricas</p>
+</div>
+<div class="stats">
+<div class="stat-box">
+<div class="stat-number">34</div>
+<div class="stat-label">Artistas Analizados</div>
+</div>
+<div class="stat-box">
+<div class="stat-number">8</div>
+<div class="stat-label">Columnas de Datos</div>
+</div>
+<div class="stat-box">
+<div class="stat-number">2</div>
+<div class="stat-label">Escalas Numéricas</div>
+</div>
+</div>
+<div class="features-list">
+<h3>🎯 Nuevas Funcionalidades del Archivo</h3>
+<ul>
+<li><strong>Valoración Crítica (0-10):</strong> Puntuación numérica profesional para rankings</li>
+<li><strong>Valoración del Público (0-10):</strong> Puntuación de sentimiento popular</li>
+<li><strong>Análisis Textuales Completos:</strong> Descripciones detalladas de 5 líneas máximo</li>
+<li><strong>Datos Listos para Estadísticas:</strong> Promedios, rankings, correlaciones</li>
+<li><strong>Filtros y Ordenación:</strong> Por fecha, escenario, valoración, género</li>
+<li><strong>Formato Profesional:</strong> Columnas optimizadas para análisis de datos</li>
+</ul>
+</div>
+<div class="download-section">
+<button class="download-btn" onclick="generateAndDownloadExcel()">
+                📥 Descargar Archivo Excel Completo
+            </button>
+</div>
+<h3>👀 Vista Previa de las Primeras 5 Filas:</h3>
+<table class="preview-table" id="previewTable">
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Horario</th>
+<th>Escenario</th>
+<th>Fecha</th>
+<th>Opinión de la Crítica</th>
+<th>Nota Crítica</th>
+<th>Sentimiento del Público</th>
+<th>Nota Público</th>
+</tr>
+</thead>
+<tbody>
+<!-- Se llenará con JavaScript -->
+</tbody>
+</table>
+</div>
+<script>
+        // Datos completos del festival con análisis y valoraciones numéricas
+        const festivalDataComplete = [
+            ['Puño Dragón', '17.00-17.40', 'Ambar', '2025-09-05T22:00:44.000Z', 
+             'Propuesta indie rock emergente con guitarras enérgicas y melodías directas. Su sonido se enmarca en el nuevo rock nacional con influencias del garage y post-punk. Aunque su discografía es aún breve, muestran potencial compositivo y una actitud escénica prometedora dentro del panorama alternativo español.', 6.5,
+             'Banda en crecimiento con seguidores fieles en el circuito indie español. Sus directos generan buena energía y conectan especialmente con público joven. Las redes sociales muestran expectación positiva hacia sus nuevas propuestas, aunque su reconocimiento sigue siendo principalmente underground.', 7.0],
+            
+            ['Alcalá Norte', '18.25-19.15', 'Ambar', '2025-09-05T22:00:44.000Z',
+             'Formación madrileña que destaca por su fusión inteligente de pop melódico con tintes de rock alternativo. Sus composiciones demuestran madurez lírica y arreglos cuidados que los posicionan como una de las apuestas más sólidas del indie nacional actual, con particular habilidad para crear himnos emotivos.', 7.8,
+             'Gran acogida en festivales y salas de Madrid. Su música genera conexión emocional fuerte con el público, especialmente por sus letras cercanas y melodías pegadizas. En redes sociales acumulan comentarios muy positivos sobre sus directos y nueva música, consolidándose como favoritos del público indie.', 8.2],
+            
+            ['Los Secretos', '20.05-21.10', 'Ambar', '2025-09-05T22:00:44.000Z',
+             'Leyenda viviente del pop rock español y pilar fundamental de la movida madrileña. Con más de cuatro décadas de trayectoria, han demostrado una capacidad única para crear canciones atemporales que trascienden generaciones. Su sonido country-rock y sus armonías vocales los convierten en referentes indiscutibles del mejor pop nacional.', 9.2,
+             'Veneración absoluta de múltiples generaciones que cantan cada canción como himnos personales. Sus conciertos son experiencias emotivas donde la nostalgia se mezcla con la celebración. Público fidelísimo que los considera patrimonio musical español, con entradas agotadas sistemáticamente en cada gira.', 9.5],
+            
+            ['Coque Malla', '22.15-23.35', 'Ambar', '2025-09-05T22:00:44.000Z',
+             'Veterano indiscutible del rock español con una capacidad única para reinventarse manteniendo su esencia. Su transición de Los Ronaldos al proyecto solista demuestra madurez artística excepcional. Sus letras inteligentes y su carisma escénico lo consolidan como uno de los mejores frontmen del país.', 8.5,
+             'Admiración transversal que abarca desde fans de Los Ronaldos hasta nuevas generaciones. Su presencia escénica genera momentos mágicos y su cercanía con el público es legendaria. Comentarios constantes sobre su capacidad para emocionar y hacer cantar a toda la audiencia.', 8.8],
+            
+            ['Love of Lesbian', '0.40-2.00', 'Ambar', '2025-09-05T22:00:44.000Z',
+             'Arquitectos del indie español moderno, con Santi Balmes como letrista excepcional y la banda como creadores de paisajes sonoros únicos. Su evolución desde el rock alternativo hacia terrenos más experimentales demuestra una ambición artística que los sitúa en la élite creativa nacional. Maestros de la melancolía inteligente.', 9.1,
+             'Devoción casi religiosa de sus seguidores, que viven cada concierto como una experiencia catártica. Sus letras generan identificación profunda y sus directos son celebrados como eventos imprescindibles. Comunidad de fans extremadamente activa que considera a la banda como banda sonora de sus vidas.', 9.3],
+            
+            ['Cuarteto de Nos', '17.40-18.25', 'Caja rural', '2025-09-05T22:00:44.000Z',
+             'Veteranos del rock alternativo uruguayo con tres décadas de irreverencia inteligente. Su humor ácido y crítica social, combinados con arreglos sofisticados, los han convertido en referentes del rock latinoamericano. Capacidad única para mezclar entretenimiento y reflexión en propuestas musicalmente ambiciosas.', 8.0,
+             'Seguidores fieles en toda Iberoamérica que celebran su humor inteligente y capacidad para abordar temas serios con ironía. Sus conciertos generan ambiente festivo y participativo. Público que valora especialmente su longevidad y consistencia artística a lo largo de los años.', 8.4],
+            
+            ['Sinova', '19.15-20.05', 'Caja rural', '2025-09-05T22:00:44.000Z',
+             'Banda emergente del rock nacional con propuesta energética y directa. Su sonido post-grunge con melodías efectivas los posiciona como continuadores de la tradición rockera española. Aunque su estilo no es revolucionario, ejecutan con solidez y muestran potencial de crecimiento dentro del género.', 6.8,
+             'Recepción positiva en el público joven del rock español. Sus directos son valorados por su energía y profesionalidad. Seguidores en crecimiento que aprecian su autenticidad y capacidad para conectar con las nuevas generaciones del rock nacional.', 7.3],
+            
+            ['G-5', '21.10-22.10', 'Caja rural', '2025-09-05T22:00:44.000Z',
+             'Propuesta hip-hop española con flow técnico y letras elaboradas. Su aproximación al rap muestra influencias tanto del boom bap clásico como del trap moderno. Aunque no innovan radicalmente en el género, demuestran habilidad técnica y capacidad para crear tracks efectivos.', 6.2,
+             'Aceptación moderada en la escena hip-hop nacional. Su público valora especialmente sus habilidades técnicas y autenticidad en las letras. Presencia creciente en redes sociales y buena recepción en festivales de música urbana.', 6.8],
+            
+            ['Los Ángeles Azules', '23.40-0.40', 'Caja rural', '2025-09-05T22:00:44.000Z',
+             'Institución de la cumbia mexicana que ha sabido evolucionar manteniendo la esencia del género. Sus colaboraciones con artistas contemporáneos han revitalizado su propuesta sin perder autenticidad. Representan la tradición cumbiera en su mejor expresión, con arreglos impecables y carisma desbordante.', 8.3,
+             'Adoración incondicional en todo el mundo hispano. Sus conciertos son auténticas fiestas donde diferentes generaciones bailan juntas. Público masivo que los considera patrimonio musical latinoamericano, generando ambiente festivo incomparable en cada presentación.', 9.0],
+            
+            ['Alizzz', '2.00-3.00', 'Caja rural', '2025-09-05T22:00:44.000Z',
+             'Productor y DJ catalán que ha sabido fusionar electrónica, pop y reggaeton con inteligencia excepcional. Su capacidad para crear hits pegadizos sin sacrificar sofisticación lo posiciona como uno de los creadores más interesantes de la nueva música popular española.', 7.5,
+             'Gran aceptación entre público joven que busca propuestas frescas y bailables. Sus colaboraciones han expandido su base de fans considerablemente. Valorado especialmente por su capacidad para hacer música comercial sin perder credibilidad artística.', 8.0],
+            
+            ['Total Noventa', '17.15-17.55', 'Palco VIP', '2025-09-05T22:00:44.000Z',
+             'Banda que rinde homenaje a la música de los 90 con conocimiento y respeto por la época. Su aproximación nostálgica está bien ejecutada y logra capturar la esencia del rock alternativo de la década. Propuesta efectiva para un nicho específico, aunque limitada en ambición artística.', 6.0,
+             'Conexión fuerte con público nostálgico de los 90. Sus directos generan ambiente de celebración generacional. Seguidores que valoran la precisión en la recreación de sonidos de la época y la calidad de sus versiones e interpretaciones originales.', 7.5],
+            
+            ['Johnny Garso', '18.30-19.20', 'Palco VIP', '2025-09-05T22:00:44.000Z',
+             'Artista emergente con propuesta pop-rock que busca su identidad dentro del panorama nacional. Sus composiciones muestran influencias variadas pero aún necesitan mayor definición estilística. Potencial evidente que requiere desarrollo compositivo para alcanzar relevancia significativa en el panorama musical.', 5.8,
+             'Interés creciente en circuitos underground. Su música genera curiosidad entre seguidores de nuevas propuestas del indie nacional. Recepción positiva pero aún limitada a círculos específicos, con expectativas de crecimiento futuro.', 6.5],
+            
+            ['La Gusana Ciega', '19.55-20.45', 'Palco VIP', '2025-09-05T22:00:44.000Z',
+             'Veteranos del rock alternativo mexicano con dos décadas de trayectoria sólida. Su evolución desde el rock experimental hacia territorios más accesibles ha sido inteligente. Mantienen relevancia gracias a su capacidad para reinventarse sin perder la esencia que los caracteriza.', 7.3,
+             'Respeto y cariño del público rockero mexicano y latinoamericano. Sus seguidores valoran su consistencia y longevidad. Conciertos que generan ambiente nostálgico y celebrativo entre fans de larga data del rock alternativo mexicano.', 7.8],
+            
+            ['José Madero', '21.20-22.10', 'Palco VIP', '2025-09-05T22:00:44.000Z',
+             'Ex-vocalista de Panda que ha encontrado su voz como solista con propuestas más maduras y personales. Su transición del rock juvenil hacia territorios más introspectivos demuestra evolución artística notable. Letrista capaz con melodías efectivas y mayor profundidad emocional.', 7.0,
+             'Seguimiento fiel de fans de Panda que han madurado con él. Su música genera conexión emocional fuerte, especialmente entre público mexicano. Valorado por su honestidad artística y capacidad para abordar temas personales con sensibilidad.', 8.1],
+            
+            ['Monsieur Periné', '22.45-23.35', 'Palco VIP', '2025-09-05T22:00:44.000Z',
+             'Colectivo colombiano que fusiona swing, jazz y música latinoamericana con elegancia y sofisticación excepcionales. Su propuesta multicultural es refrescante y técnicamente impecable. Representan la nueva música latina culta, con arreglos elaborados y carisma desbordante en cada presentación.', 8.7,
+             'Admiración internacional por su propuesta única y carismática. Público diverso que celebra su alegría contagiosa y calidad musical. Sus conciertos son experiencias festivas que trascienden barreras generacionales y culturales, generando ambiente de celebración pura.', 8.9],
+            
+            ['Cala Vento', '0.10-1.00', 'Palco VIP', '2025-09-05T22:00:44.000Z',
+             'Banda de rock alternativo con propuesta honesta y directa. Su sonido abarca desde el indie rock hasta el post-punk con influencias garage. Aunque no reinventan el género, ejecutan con convicción y muestran personalidad propia dentro del saturado panorama del rock independiente español.', 6.4,
+             'Seguidores fieles en la escena indie española que valoran su autenticidad. Sus directos son celebrados por su energía y sinceridad. Público joven que aprecia su aproximación sin pretensiones al rock alternativo contemporáneo.', 7.1],
+            
+            ['El Momo', '1.35-2.25', 'Palco VIP', '2025-09-05T22:00:44.000Z',
+             'Propuesta experimental que fusiona electrónica, hip-hop y sonidos urbanos con resultados variables. Su aproximación a la música urbana muestra ambición pero necesita mayor cohesión estilística. Interesante como experimento sonoro, aunque requiere desarrollo para alcanzar relevancia sostenida.', 5.5,
+             'Curiosidad y receptividad entre público joven interesado en propuestas urbanas experimentales. Su música genera debate entre seguidores de diferentes géneros. Recepción mixta que oscila entre la intriga y la confusión estilística.', 6.2],
+            
+            ['María José Llergo', '17.00-17.40', 'Ambar', '2025-09-06T22:00:44.000Z',
+             'Artista flamenco-experimental que representa la vanguardia más interesante del género. Su fusión de tradición flamenca con electrónica y R&B es revolucionaria y técnicamente impecable. Voz extraordinaria y visión artística única que redefine los límites del flamenco contemporáneo con valentía excepcional.', 9.0,
+             'Admiración unánime tanto en círculos flamencos tradicionales como en público joven experimental. Su propuesta genera fascinación por su originalidad y respeto por su técnica. Considerada una de las voces más importantes de la nueva música española.', 8.8],
+            
+            ['Zahara', '18.25-19.15', 'Ambar', '2025-09-06T22:00:44.000Z',
+             'Una de las artistas más importantes del panorama español actual. Su evolución desde el indie pop hacia territorios más experimentales y personales culmina con "PUTA", un disco valiente y necesario. Compositora excepcional, productora competente y performer magnética que redefine constantemente los límites artísticos.', 9.3,
+             'Devoción apasionada de seguidores que la consideran voz de su generación. Sus conciertos son experiencias transformadoras que generan comunidad. Especialmente tras "PUTA", es vista como referente feminista y artístico, con impacto social que trasciende la música.', 9.1],
+            
+            ['Fangoria', '20.05-21.05', 'Ambar', '2025-09-06T22:00:44.000Z',
+             'Dúo icónico del tecno-pop español que ha sabido evolucionar manteniendo relevancia durante décadas. Alaska y Nacho Canut han creado un universo sonoro único que fusiona electrónica, pop y performance con inteligencia y glamour. Referentes indiscutibles de la música de baile española.', 8.4,
+             'Adoración de múltiples generaciones que los consideran patrimonio cultural español. Sus conciertos son celebraciones masivas donde la diversión está garantizada. Público transgeneracional que celebra su capacidad para mantenerse frescos y relevantes.', 8.7],
+            
+            ['Kase.O', '22.15-23.45', 'Ambar', '2025-09-06T22:00:44.000Z',
+             'Leyenda absoluta del hip-hop español y figura tutelar del rap en castellano. Su técnica lírica es impecable y su capacidad para contar historias, única. Con Violadores del Verso y en solitario ha demostrado ser el MC más respetado del país, con flows complejos y contenido de altísima calidad.', 9.4,
+             'Veneración absoluta en la comunidad hip-hop española y latinoamericana. Sus conciertos son eventos casi religiosos donde cada verso es coreado. Considerado el mejor rapero en español por gran parte del público, con seguidores de todas las edades y múltiples países.', 9.6],
+            
+            ['Molotov', '0.50-2.00', 'Ambar', '2025-09-06T22:00:44.000Z',
+             'Banda icónica del rock mexicano que ha mantenido su relevancia durante tres décadas. Su mezcla de rock, rap y funk, combinada con letras provocadoras y crítica social, los convierte en referentes indiscutibles del rock latinoamericano. Energía desbordante y mensaje político que sigue siendo actual.', 8.6,
+             'Adoración masiva en todo el mundo hispanohablante. Sus conciertos son explosiones de energía donde el público vive una catarsis colectiva. Considerados patrimonio del rock latino, generan fervor religioso entre sus seguidores de múltiples generaciones.', 9.2],
+            
+            ['Los Punsetes', '17.40-18.25', 'Caja rural', '2025-09-06T22:00:44.000Z',
+             'Banda indie madrileña con propuesta melódica y letras inteligentes. Su sonido combina indie pop con toques de rock alternativo, creando canciones pegadizas y emotivas. Representan el indie español más accesible y emotivo, con capacidad para generar himnos generacionales dentro de su nicho.', 7.2,
+             'Seguidores fieles en la escena indie española que valoran su honestidad emocional. Sus conciertos generan ambiente íntimo y participativo. Público que conecta especialmente con sus letras personales y melodías nostálgicas del indie nacional.', 7.6],
+            
+            ['Maldita Vecindad', '19.15-20.15', 'Caja rural', '2025-09-06T22:00:44.000Z',
+             'Leyendas del rock mexicano que fusionan rock, ska y sonidos latinos con maestría excepcional. Su propuesta combina rebeldía punk con raíces mexicanas, creando un sonido único e influyente. Veteranos que mantienen vigencia gracias a su autenticidad y capacidad para transmitir la esencia del rock latino.', 8.8,
+             'Veneración en México y toda Latinoamérica como pioneros del rock en español. Sus conciertos son celebraciones masivas de identidad cultural. Público multigeneracional que los considera patrimonio musical mexicano, con ambiente festivo y reivindicativo garantizado.', 9.1],
+            
+            ['Iván Ferreiro', '21.10-22-10', 'Caja rural', '2025-09-06T22:00:44.000Z',
+             'Ex-líder de Los Piratas que ha consolidado una carrera solista excepcional. Su evolución hacia un sonido más personal y maduro demuestra crecimiento artístico constante. Compositor sólido con capacidad para crear tanto canciones íntimas como himnos rockeros, manteniendo siempre calidad compositiva.', 8.1,
+             'Respeto y cariño del público español e internacional. Sus seguidores valoran su honestidad artística y evolución constante. Conciertos que generan ambiente cálido y emocional, especialmente valorados por su cercanía y autenticidad escénica.', 8.3],
+            
+            ['León Benavente', '23.50-0.50', 'Caja rural', '2025-09-06T22:00:44.000Z',
+             'Proyecto indie español con propuesta intelectual y sonido elaborado. Su aproximación al rock alternativo incluye elementos electrónicos y experimentales bien integrados. Banda que representa el indie español más culto, con letras elaboradas y arreglos sofisticados que los distinguen del panorama nacional.', 7.5,
+             'Seguidores del indie español más exigente que valoran su propuesta cerebral. Sus conciertos atraen público culto y conocedor. Recepción positiva entre críticos y melómanos, aunque su alcance se limita a círculos específicos del indie nacional.', 7.4],
+            
+            ['Macaco', '2.00-3.05', 'Caja rural', '2025-09-06T22:00:44.000Z',
+             'Artista catalán que fusiona rumba, reggae y sonidos mediterráneos con mensaje positivo constante. Su propuesta multicultural y festiva ha evolucionado manteniendo frescura. Representa la nueva rumba catalana con apertura mundial, combinando tradición con modernidad en propuestas siempre optimistas.', 7.6,
+             'Gran aceptación en el público español y latinoamericano que busca música positiva. Sus conciertos son celebraciones donde la alegría es protagonista. Valorado especialmente por familias y público diverso que aprecia su mensaje esperanzador y ritmos bailables.', 8.1],
+            
+            ['Señoras y Bedeles', '17.15-17.55', 'Palco VIP', '2025-09-06T22:00:44.000Z',
+             'Banda indie española con propuesta fresca y juvenil. Su sonido pop-rock combina melodías pegadizas con actitud desenfadada. Aunque su estilo no es revolucionario, muestran frescura y potencial dentro del panorama indie nacional emergente.', 6.1,
+             'Interés creciente entre público joven del indie español. Sus directos generan ambiente divertido y relajado. Seguidores que aprecian su espontaneidad y capacidad para crear canciones directas y accesibles dentro del circuito independiente.', 6.7],
+            
+            ['Conociendo Rusia', '18.30-19.20', 'Palco VIP', '2025-09-06T22:00:44.000Z',
+             'Banda argentina de indie rock con propuesta melódica y emotiva. Su sonido combina influencias del rock nacional argentino con toques indie modernos. Representan la nueva generación del rock argentino, con canciones que conectan emocionalmente y muestran madurez compositiva progresiva.', 7.4,
+             'Gran acogida en Argentina y creciente reconocimiento internacional. Su música genera conexión emocional fuerte, especialmente entre público joven latinoamericano. Valorados por su honestidad lírica y capacidad para crear ambiente nostálgico y emotivo.', 7.9],
+            
+            ['La Estrella Azul Live', '19.55-20.45', 'Palco VIP', '2025-09-06T22:00:44.000Z',
+             'Proyecto homenaje a Mauricio Aznar que recrea su legado musical con respeto y calidad. Su aproximación a las canciones del músico aragonés muestra conocimiento profundo de su obra. Propuesta emotiva que funciona como puente generacional, manteniendo viva la memoria de un artista fundamental.', 6.8,
+             'Emoción especial entre seguidores de Mauricio Aznar y público aragonés. Sus conciertos son homenajes sentidos que generan nostalgia y celebración. Valorados especialmente por su respeto hacia el legado original y capacidad para emocionar a través de la memoria musical.', 8.0],
+            
+            ['Depresión Sonora', '21.20-22.10', 'Palco VIP', '2025-09-06T22:00:44.000Z',
+             'Banda indie con propuesta melancólica y sonido elaborado. Su aproximación al rock alternativo incluye elementos shoegaze y dream pop bien integrados. Aunque su nombre sugiere tristeza, crean paisajes sonoros hermosos y envolventes que muestran sofisticación compositiva.', 7.0,
+             'Seguidores del indie más introspectivo que valoran su propuesta atmosférica. Sus conciertos generan ambiente contemplativo y emocional. Público que aprecia especialmente su capacidad para crear texturas sonoras y ambientes envolventes.', 7.2],
+            
+            ['Las Novias', '22.45-23.35', 'Palco VIP', '2025-09-06T22:00:44.000Z',
+             'Veteranas del pop español de los 80 que regresan con nostalgia y calidad intacta. Su sonido new wave y post-punk sigue siendo fresco y relevante. Representan la mejor tradición del pop nacional ochentero, con canciones que han resistido el paso del tiempo.', 7.8,
+             'Nostalgia profunda entre generaciones que vivieron los 80. Sus conciertos son viajes emotivos al pasado que generan celebración generacional. Público que valora especialmente su autenticidad y la calidad perdurable de sus composiciones clásicas.', 8.5],
+            
+            ['Modelo', '0.10-1.00', 'Palco VIP', '2025-09-06T22:00:44.000Z',
+             'Banda local emergente con propuesta indie rock honesta y directa. Su sonido se enmarca en la tradición del rock alternativo español con personalidad propia. Aunque aún en desarrollo, muestran potencial y capacidad para conectar con el público a través de propuestas sinceras.', 5.9,
+             'Apoyo local y creciente interés en la escena indie zaragozana. Sus directos generan ambiente cercano y familiar. Público que valora especialmente su origen local y capacidad para representar la nueva música emergente de la ciudad.', 6.8],
+            
+            ['Son Rompe Pera', '1.50-2.40', 'Palco VIP', '2025-09-06T22:00:44.000Z',
+             'Colectivo mexicano que reinventa la cumbia con elementos electrónicos y urbanos. Su propuesta fusiona tradición cumbiera con sonidos modernos de manera inteligente y bailable. Representan la nueva cumbia mexicana, con propuesta fresca que respeta raíces mientras abraza la modernidad.', 7.7,
+             'Gran aceptación entre público joven mexicano y latinoamericano que busca propuestas bailables innovadoras. Sus conciertos son fiestas garantizadas que combinan tradición y modernidad. Valorados por su capacidad para hacer bailar mientras experimentan con la cumbia tradicional.', 8.3]
+        ];
+
+        // Función para formatear la fecha
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('es-ES');
+        }
+
+        // Función para obtener clase de color según puntuación
+        function getScoreClass(score) {
+            if (score >= 8.5) return 'score-high';
+            if (score >= 7.0) return 'score-medium';
+            return 'score-low';
+        }
+
+        // Llenar la tabla de vista previa
+        function fillPreviewTable() {
+            const tbody = document.querySelector('#previewTable tbody');
+            const previewData = festivalDataComplete.slice(0, 5);
+            
+            previewData.forEach(row => {
+                const criticalPreview = row[4].substring(0, 120) + '...';
+                const publicPreview = row[6].substring(0, 120) + '...';
+                
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><strong>${row[0]}</strong></td>
+                    <td>${row[1]}</td>
+                    <td>${row[2]}</td>
+                    <td>${formatDate(row[3])}</td>
+                    <td class="analysis-cell">${criticalPreview}</td>
+                    <td class="score-cell ${getScoreClass(row[5])}">${row[5]}</td>
+                    <td class="analysis-cell">${publicPreview}</td>
+                    <td class="score-cell ${getScoreClass(row[7])}">${row[7]}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Función para generar y descargar el archivo Excel
+        function generateAndDownloadExcel() {
+            try {
+                // Crear el libro de trabajo
+                const workbook = XLSX.utils.book_new();
+                
+                // Preparar los datos con encabezados completos
+                const worksheetData = [
+                    ['Grupo', 'Horario inicio', 'Escenario', 'Fecha', 'Opinión de la crítica', 'Valoración crítica (0-10)', 'Sentimiento del público', 'Valoración del público (0-10)'],
+                    ...festivalDataComplete
+                ];
+                
+                // Crear la hoja de cálculo
+                const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
+                
+                // Ajustar el ancho de las columnas
+                worksheet['!cols'] = [
+                    { width: 25 }, // Grupo
+                    { width: 15 }, // Horario inicio
+                    { width: 15 }, // Escenario
+                    { width: 12 }, // Fecha
+                    { width: 100 }, // Opinión de la crítica
+                    { width: 15 }, // Valoración crítica
+                    { width: 100 }, // Sentimiento del público
+                    { width: 15 }  // Valoración del público
+                ];
+                
+                // Agregar la hoja al libro
+                XLSX.utils.book_append_sheet(workbook, worksheet, 'Vive Latino 2025 Completo');
+                
+                // Crear hoja adicional con estadísticas
+                const statsData = [
+                    ['ESTADÍSTICAS DEL FESTIVAL VIVE LATINO 2025'],
+                    [''],
+                    ['Promedios Generales'],
+                    ['Valoración Crítica Promedio', calculateAverage(festivalDataComplete, 5)],
+                    ['Valoración del Público Promedio', calculateAverage(festivalDataComplete, 7)],
+                    [''],
+                    ['Top 5 - Valoración Crítica'],
+                    ...getTopArtists(festivalDataComplete, 5, 5),
+                    [''],
+                    ['Top 5 - Valoración del Público'],
+                    ...getTopArtists(festivalDataComplete, 7, 5),
+                    [''],
+                    ['Distribución por Escenarios'],
+                    ...getVenueStats(festivalDataComplete),
+                    [''],
+                    ['Artistas por Día'],
+                    ['Viernes 5 septiembre', festivalDataComplete.filter(row => row[3] === '2025-09-05T22:00:44.000Z').length],
+                    ['Sábado 6 septiembre', festivalDataComplete.filter(row => row[3] === '2025-09-06T22:00:44.000Z').length]
+                ];
+                
+                const statsWorksheet = XLSX.utils.aoa_to_sheet(statsData);
+                statsWorksheet['!cols'] = [{ width: 30 }, { width: 20 }];
+                XLSX.utils.book_append_sheet(workbook, statsWorksheet, 'Estadísticas');
+                
+                // Generar el archivo y descargarlo
+                XLSX.writeFile(workbook, 'vive_latino_2025_completo_con_analisis.xlsx');
+                
+                // Mostrar mensaje de éxito
+                const btn = document.querySelector('.download-btn');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '✅ ¡Descarga completada!';
+                btn.style.background = 'linear-gradient(45deg, #28a745, #20c997)';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = 'linear-gradient(45deg, #28a745, #20c997)';
+                }, 3000);
+                
+            } catch (error) {
+                console.error('Error al generar el archivo:', error);
+                alert('Error al generar el archivo. Por favor, inténtalo de nuevo.');
+            }
+        }
+
+        // Función para calcular promedio
+        function calculateAverage(data, columnIndex) {
+            const sum = data.reduce((acc, row) => acc + row[columnIndex], 0);
+            return (sum / data.length).toFixed(2);
+        }
+
+        // Función para obtener top artistas
+        function getTopArtists(data, scoreColumnIndex, limit) {
+            return data
+                .sort((a, b) => b[scoreColumnIndex] - a[scoreColumnIndex])
+                .slice(0, limit)
+                .map((row, index) => [`${index + 1}. ${row[0]}`, row[scoreColumnIndex]]);
+        }
+
+        // Función para estadísticas por escenario
+        function getVenueStats(data) {
+            const venues = {};
+            data.forEach(row => {
+                const venue = row[2];
+                if (!venues[venue]) venues[venue] = 0;
+                venues[venue]++;
+            });
+            return Object.entries(venues).map(([venue, count]) => [venue, count]);
+        }
+
+        // Inicializar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            fillPreviewTable();
+        });
+    </script>
+</body>
+</html>
+<!-- /wp:html -->
+<!-- wp:quote -->
+<!-- wp:paragraph -->
+<p>Prompt 1</p>
+<!-- /wp:paragraph --><cite>El siguiente fichero tiene 4 columnas: Grupo, Horario incio, Escenario y Fecha. Los campos escenario y fecha son correctos. El campo Horario de inicio esta vacío en todos los registros. En el campo grupo aparecen dos informaciones: el horario (en negrita) y el nombre del grupo. ¿podrías rellenar el nombre del campo y el horario en su columna correspondiente?</cite>
+<!-- /wp:quote -->
+<!-- wp:quote {"className":"is-style-default","fontSize":"small"} -->
+<!-- wp:paragraph -->
+<p>Prompt 2</p>
+<!-- /wp:paragraph --><cite>Me gustaría automátizar la valoración de los grupos por parte de críticos musicales y por parte del público. Para ello me gustaría que me añadieras dos columnas: "opinión de la crítica" y "sentimiento del público". # PRIMERA COLUMNA Actúa como si fueras un crítico musical y elaboradme un análisis del grupo o artista que me permita hacerme una idea del tipo de música y de la relevancia de la propuesta dentro del panorama actual de su género. Máximo 5 líneas. Incluye al final una valoración del 0 al 10.<br/>En la segunda columna, "sentimiento del público"<br/># SEGUNDA COLUMNA<br/>Busca en internet opiniones del artista/grupo y evalúa en función de su repercusión mediática la calidad de la propuesta. Describe el grupo en 5 líneas. Incluye al final una valoración del 0 al 10 basada en el sentimiento mayoritario de las personas sobre el artista en relación al género o tipo de propuesta musical</cite>
+<!-- /wp:quote -->
+<!-- wp:paragraph -->
+<p>NOTA: modelo de IA utilizado Claude Sonnet 4</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<p>© 2024 Ricard Penalver. Todos los derechos reservados.</p>
+</div>
+</footer>
+<script src="/script.js"></script>
+</body>
+</html>
