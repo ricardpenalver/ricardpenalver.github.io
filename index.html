@@ -28,7 +28,14 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-image">
-                <img src="assets/images/hero-profile.jpg" alt="Ricardo Peñalver García" class="profile-image">
+                <img src="assets/images/hero-profile.jpg" 
+                     alt="Ricardo Peñalver García" 
+                     class="profile-image"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="image-placeholder" style="display: none;">
+                    <i class="fas fa-user-circle" style="font-size: 8rem; color: rgba(255,255,255,0.5);"></i>
+                    <p style="margin-top: 1rem; color: rgba(255,255,255,0.7);">Imagen no disponible</p>
+                </div>
             </div>
             <h1>¡Hola! Soy Ricardo Peñalver García</h1>
             <p>Desarrollador Full Stack & Diseñador UX/UI apasionado por crear experiencias digitales excepcionales</p>
