@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Ricardo Peñalver García</title>
+    <meta name="description" content="Blog de Ricardo Peñalver García - Artículos sobre desarrollo web, tecnología y emprendimiento">
+    <link href="../styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../" class="logo">Ricardo Peñalver García</a>
+            <ul class="nav-menu">
+                <li><a href="../" class="nav-link">Inicio</a></li>
+                <li><a href="../pages/perfil.html" class="nav-link">Sobre Mí</a></li>
+                <li><a href="../pages/mis-proyectos.html" class="nav-link">Proyectos</a></li>
+                <li><a href="index.html" class="nav-link active">Blog</a></li>
+                <li><a href="../pages/contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" style="margin-top: 80px; padding: 2rem 0;">
+        <div class="container">
+            <h1 class="section-title">Blog</h1>
+            <p class="blog-description">Artículos sobre desarrollo web, tecnología, productividad y emprendimiento</p>
+            <div class="blog-grid">
+                <!-- Los artículos se cargarán dinámicamente aquí -->
+            </div>
+            
+            <!-- Paginación -->
+            <div class="pagination-container">
+                <!-- La paginación se generará dinámicamente aquí -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ricardo Peñalver García. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="blog-data.js"></script>
+</body>
+</html>
