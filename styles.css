@@ -249,19 +249,37 @@ body {
 }
 
 .skill-item {
-    background: var(--bg-light);
-    padding: 1rem;
-    border-radius: 10px;
+    background: white;
+    padding: 1.2rem;
+    border-radius: 12px;
     text-align: center;
     font-weight: 500;
     transition: var(--transition);
     border: 2px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+    transition: left 0.5s;
 }
 
 .skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(52, 152, 219, 0.2);
     border-color: var(--accent-color);
+}
+
+.skill-item:hover::before {
+    left: 100%;
 }
 
 /* Highlight Quote */
@@ -286,7 +304,26 @@ body {
 
 /* Skills Section */
 .skills {
-    background: var(--bg-light);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(44, 62, 80, 0.05) 100%);
+    z-index: -1;
+}
+
+.skills .container {
+    position: relative;
+    z-index: 2;
 }
 
 /* Projects Section */
