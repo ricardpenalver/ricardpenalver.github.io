@@ -1,8 +1,10 @@
 {
   "version": 2,
+  "name": "ricardpenalver-website",
   "buildCommand": "",
   "outputDirectory": ".",
   "framework": null,
+  "installCommand": "",
   "builds": [
     {
       "src": "**/*",

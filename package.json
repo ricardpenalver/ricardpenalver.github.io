@@ -1,0 +1,13 @@
+{
+  "name": "ricardpenalver-website",
+  "version": "1.0.0",
+  "description": "Sitio web personal de Ricardo Peñalver",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "start": "echo 'Static site - no start needed'"
+  },
+  "keywords": ["personal", "website", "static"],
+  "author": "Ricardo Peñalver",
+  "license": "MIT"
+}
