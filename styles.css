@@ -267,7 +267,6 @@ body {
 /* Highlight Quote */
 .highlight-quote {
     background: rgba(52, 152, 219, 0.1);
-    border-left: 4px solid var(--accent-color);
     color: var(--primary-color);
     padding: 1.5rem;
     border-radius: 8px;
@@ -275,13 +274,6 @@ body {
     text-align: center;
     position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.highlight-quote i {
-    font-size: 1.2rem;
-    opacity: 0.6;
-    margin: 0 0.3rem;
-    color: var(--accent-color);
 }
 
 .highlight-quote p {
