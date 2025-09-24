@@ -249,16 +249,18 @@ body {
 }
 
 .skill-item {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     padding: 1.2rem;
     border-radius: 12px;
     text-align: center;
     font-weight: 500;
     transition: var(--transition);
-    border: 2px solid #e0e0e0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
+    color: var(--primary-color);
 }
 
 .skill-item::before {
@@ -268,14 +270,15 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.3), transparent);
     transition: left 0.5s;
 }
 
 .skill-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(52, 152, 219, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     border-color: var(--accent-color);
+    background: rgba(255, 255, 255, 1);
 }
 
 .skill-item:hover::before {
@@ -304,10 +307,16 @@ body {
 
 /* Skills Section */
 .skills {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.8), rgba(44, 62, 80, 0.8)), 
+                url('assets/images/hero-profile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     position: relative;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    color: white;
 }
 
 .skills::before {
@@ -317,13 +326,17 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(44, 62, 80, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
     z-index: -1;
 }
 
 .skills .container {
     position: relative;
     z-index: 2;
+}
+
+.skills .section-title {
+    color: white;
 }
 
 /* Projects Section */
@@ -611,6 +624,10 @@ body {
 
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills {
+        background-attachment: scroll;
     }
 }
 
