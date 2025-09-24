@@ -264,6 +264,37 @@ body {
     border-color: var(--accent-color);
 }
 
+/* Highlight Quote */
+.highlight-quote {
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+}
+
+.highlight-quote i {
+    font-size: 1.5rem;
+    opacity: 0.7;
+    margin: 0 0.5rem;
+}
+
+.highlight-quote p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* Skills Section */
+.skills {
+    background: var(--bg-light);
+}
+
 /* Projects Section */
 .projects {
     background: var(--bg-dark);
