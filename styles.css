@@ -597,6 +597,13 @@ body {
     margin-top: auto;
 }
 
+.footer-credit {
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
