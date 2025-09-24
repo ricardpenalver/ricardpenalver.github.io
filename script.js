@@ -62,6 +62,28 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
+// Skills section scroll effect (similar to hero)
+window.addEventListener('scroll', () => {
+    const skillsSection = document.querySelector('.skills');
+    if (skillsSection) {
+        const rect = skillsSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Calculate how much of the section is visible
+        const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+        const totalHeight = rect.height;
+        const visibilityRatio = Math.max(0, Math.min(1, visibleHeight / totalHeight));
+        
+        // Adjust overlay opacity based on scroll position
+        const overlay = skillsSection.querySelector('::before');
+        if (visibilityRatio > 0) {
+            // Start with full overlay, fade as user scrolls
+            const opacity = Math.max(0.3, 0.9 - (visibilityRatio * 0.6));
+            skillsSection.style.setProperty('--overlay-opacity', opacity);
+        }
+    }
+});
+
 // Mobile menu toggle
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const navMenu = document.querySelector('.nav-menu');

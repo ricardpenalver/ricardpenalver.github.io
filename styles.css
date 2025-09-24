@@ -307,8 +307,7 @@ body {
 
 /* Skills Section */
 .skills {
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.8), rgba(44, 62, 80, 0.8)), 
-                url('assets/images/hero-profile.jpg');
+    background: url('assets/images/hero-profile.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -317,6 +316,7 @@ body {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     z-index: 1;
     color: white;
+    overflow: hidden;
 }
 
 .skills::before {
@@ -326,8 +326,14 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
-    z-index: -1;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.9), rgba(44, 62, 80, 0.9));
+    z-index: 1;
+    transition: opacity 0.3s ease-out;
+    opacity: var(--overlay-opacity, 0.9);
+}
+
+.skills.visible::before {
+    opacity: 0.3;
 }
 
 .skills .container {
@@ -337,6 +343,14 @@ body {
 
 .skills .section-title {
     color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.skills.visible .section-title {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Projects Section */
