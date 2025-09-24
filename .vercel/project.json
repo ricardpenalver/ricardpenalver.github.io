@@ -1,0 +1,11 @@
+{
+  "orgId": "vercel",
+  "projectId": "ricardpenalver-website",
+  "settings": {
+    "framework": null,
+    "buildCommand": "",
+    "outputDirectory": ".",
+    "installCommand": "",
+    "devCommand": ""
+  }
+}
