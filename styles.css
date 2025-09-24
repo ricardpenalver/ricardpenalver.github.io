@@ -215,7 +215,6 @@ body {
     grid-template-columns: 1fr 2fr;
     gap: 3rem;
     align-items: center;
-    justify-items: center;
 }
 
 .about-image {
@@ -230,6 +229,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     position: relative;
     background: #f0f0f0;
+    justify-self: center;
 }
 
 .about-image:hover {
