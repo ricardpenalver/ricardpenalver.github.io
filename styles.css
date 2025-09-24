@@ -206,7 +206,8 @@ body {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: var(--accent-color);
+    background: #3498db !important;
+    border-radius: 2px;
 }
 
 /* About Section */
