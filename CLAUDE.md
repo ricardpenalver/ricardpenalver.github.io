@@ -179,6 +179,62 @@ git commit -m "Actualización del sitio"
 git push origin main
 ```
 
+## 🚀 Protocolo de Despliegue Obligatorio
+
+### ⚠️ INSTRUCCIÓN CRÍTICA: Despliegue Automático
+
+**SIEMPRE que se implementen cambios en el código, DEBE seguirse este protocolo:**
+
+1. **Verificar cambios pendientes:**
+   ```bash
+   git status
+   git diff --name-only
+   ```
+
+2. **Añadir y commitear cambios:**
+   ```bash
+   git add .
+   git commit -m "$(cat <<'EOF'
+   [Descripción clara del cambio]
+
+   - Detalle 1 del cambio
+   - Detalle 2 del cambio
+
+   🤖 Generated with [Claude Code](https://claude.ai/code)
+
+   Co-Authored-By: Claude <noreply@anthropic.com>
+   EOF
+   )"
+   ```
+
+3. **Push a GitHub:**
+   ```bash
+   git push origin main
+   ```
+
+4. **Verificar despliegue:**
+   ```bash
+   git status  # Debe mostrar "working tree clean"
+   ```
+
+### 📍 URLs de Verificación
+
+Después de cada push, verificar que ambas URLs funcionen correctamente:
+- **Vercel**: [https://ricardpenalver.vercel.app](https://ricardpenalver.vercel.app)
+- **GitHub Pages**: [https://ricardpenalver.github.io](https://ricardpenalver.github.io)
+
+### ⏱️ Tiempos de Propagación
+- **GitHub Pages**: 30-60 segundos
+- **Vercel**: 1-2 minutos
+
+### 🔄 Flujo de Trabajo Estándar
+1. Implementar cambios localmente
+2. Ejecutar protocolo de despliegue
+3. Verificar funcionamiento en ambas URLs
+4. Solo entonces continuar con siguiente tarea
+
+**IMPORTANTE**: No avanzar a la siguiente funcionalidad sin completar el despliegue y verificación.
+
 ## 📊 Estadísticas del Proyecto
 
 - **Páginas totales**: 300+ (principal + pages + blog)
