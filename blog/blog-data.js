@@ -8,11 +8,53 @@ const blogArticles = [
         category: "Productividad"
     },
     {
+        title: "IAs generativas y productividad laboral",
+        filename: "ias-generativas-y-productividad-laboral.html",
+        excerpt: "La democratización de las IAs generativas está transformando la productividad laboral. Análisis del impacto y oportunidades de estas tecnologías para mejorar la eficiencia profesional...",
+        date: "2023-08-05",
+        category: "Tecnología"
+    },
+    {
+        title: "Cómo gestionar mejor tu correo electrónico",
+        filename: "cómo-gestionar-mejor-tu-correo-electrónico.html",
+        excerpt: "Estrategias prácticas para organizar tu bandeja de entrada con filtros, carpetas y técnicas de gestión eficiente del email profesional...",
+        date: "2023-07-15",
+        category: "Productividad"
+    },
+    {
         title: "Agenda de Conciertos de un Festival con IA",
         filename: "agenda-de-conciertos-de-un-festival-con-ia.html",
         excerpt: "Cómo la inteligencia artificial puede ayudarnos a crear agendas personalizadas para festivales de música...",
         date: "2025-01-10",
         category: "Tecnología"
+    },
+    {
+        title: "Business Model Canvas como herramienta para emprendedores",
+        filename: "business-model-canvas-como-herramienta-para-emprendedores.html",
+        excerpt: "Análisis detallado del Business Model Canvas de Osterwalder: 9 elementos clave para diseñar modelos de negocio exitosos y validar ideas emprendedoras...",
+        date: "2013-06-27",
+        category: "Emprendimiento"
+    },
+    {
+        title: "Del garaje a la incubadora pasando por el vivero",
+        filename: "del-garaje-a-la-incubadora-pasando-por-el-vivero.html",
+        excerpt: "Evolución del ecosistema emprendedor moderno: diferencias entre incubadoras, viveros de empresas y aceleradoras. Guía completa de estructuras de apoyo al emprendimiento...",
+        date: "2013-10-26",
+        category: "Emprendimiento"
+    },
+    {
+        title: "La estrategia del océano azul",
+        filename: "estrategia-del-océano-azul.html",
+        excerpt: "Estrategia de no competencia basada en W. Chan Kim: crear nuevos mercados vs. competir en océanos rojos saturados. Metodología para innovación disruptiva...",
+        date: "2013-12-26",
+        category: "Estrategia"
+    },
+    {
+        title: "Mínimo Producto Viable (MVP)",
+        filename: "mínimo-producto-viable-mvp.html",
+        excerpt: "El concepto MVP dentro de la metodología Lean Startup: cómo validar productos en el mercado antes de invertir tiempo y recursos en desarrollo completo...",
+        date: "2014-06-26",
+        category: "Emprendimiento"
     },
     {
         title: "La Pausa Necesaria",
