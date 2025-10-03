@@ -307,6 +307,111 @@ const blogArticles = [
         excerpt: "Técnicas avanzadas para la gestión eficiente del correo electrónico. Metodologías de organización, filtrado y optimización de la comunicación digital...",
         date: "2023-01-20",
         category: "Productividad"
+    },
+    {
+        title: "Un capítulo que se cierra, una novela que sigue",
+        filename: "un-capítulo-que-se-cierra-una-novela-que-sigue.html",
+        excerpt: "La vida, como una buena novela, la escribimos por capítulos. Reflexión sobre transiciones profesionales, cambios de carrera y evolución personal...",
+        date: "2025-06-10",
+        category: "Reflexión Personal"
+    },
+    {
+        title: "Liderazgo con propósito",
+        filename: "liderazgo-con-propósito.html",
+        excerpt: "Análisis del liderazgo moderno basado en 'La Apple de Tim Cook' de Leander Kahney. Principios de liderazgo centrado en valores y propósito organizacional...",
+        date: "2025-06-01",
+        category: "Liderazgo"
+    },
+    {
+        title: "Superpotencias de la inteligencia artificial",
+        filename: "superpotencias-de-la-inteligencia-artificial.html",
+        excerpt: "Reseña del libro de Kai Fu Lee sobre el futuro de la IA. Visión optimista de la inteligencia artificial como herramienta para potenciar la humanidad...",
+        date: "2023-11-22",
+        category: "Inteligencia Artificial"
+    },
+    {
+        title: "Ventajas y desventajas del crowdsourcing",
+        filename: "ventajas-y-desventajas-del-crowdsourcing.html",
+        excerpt: "Análisis del crowdsourcing como modelo de colaboración abierta. Exploración de las oportunidades y riesgos de la externalización a la multitud...",
+        date: "2014-02-26",
+        category: "Innovación"
+    },
+    {
+        title: "V Edición del Salón Mi Empresa",
+        filename: "v-edición-del-salón-mi-empresa.html",
+        excerpt: "Experiencias y aprendizajes del evento empresarial. Networking, tendencias de negocio y oportunidades de colaboración en el ecosistema emprendedor...",
+        date: "2014-05-05",
+        category: "Eventos"
+    },
+    {
+        title: "Still a Michael J. Fox Movie",
+        filename: "still-a-michael-j-fox-movie.html",
+        excerpt: "Reflexiones sobre perseverancia y superación personal inspiradas en la carrera de Michael J. Fox. Lecciones de liderazgo frente a la adversidad...",
+        date: "2013-11-20",
+        category: "Inspiración"
+    },
+    {
+        title: "Split",
+        filename: "split.html",
+        excerpt: "Análisis sobre división de responsabilidades y especialización en equipos de trabajo. Estrategias para optimizar la colaboración y productividad grupal...",
+        date: "2014-04-15",
+        category: "Gestión de Equipos"
+    },
+    {
+        title: "Vive Latino 2025",
+        filename: "vive-latino-2025.html",
+        excerpt: "Proyecto de valoración de artistas para festival musical. Aplicación de metodologías de evaluación y análisis de datos en la industria cultural...",
+        date: "2024-12-15",
+        category: "Proyectos Culturales"
+    },
+    {
+        title: "Blog de Finikitocom",
+        filename: "blog-de-finikitocom.html",
+        excerpt: "Desarrollo y gestión de blog especializado en emprendimiento digital. Estrategias de content marketing y construcción de audiencia online...",
+        date: "2014-08-10",
+        category: "Marketing de Contenidos"
+    },
+    {
+        title: "Blog de Ricardo",
+        filename: "blog-de-ricardo.html",
+        excerpt: "Evolución del blog personal como herramienta de desarrollo profesional. Reflexiones sobre escritura, comunicación y marca personal digital...",
+        date: "2014-07-05",
+        category: "Marca Personal"
+    },
+    {
+        title: "Locuciones Radio Praga",
+        filename: "locuciones-radio-praga.html",
+        excerpt: "Experiencia profesional en medios de comunicación internacionales. Desarrollo de habilidades de comunicación y adaptación cultural...",
+        date: "2013-06-15",
+        category: "Comunicación"
+    },
+    {
+        title: "Crisis, sostenibilidad y medioambiente - Ampliado",
+        filename: "crisis-sostenibilidad-y-medioambiente.html",
+        excerpt: "Análisis profundo de modelos de negocio sostenibles en contextos de crisis. Integración de responsabilidad ambiental y viabilidad económica...",
+        date: "2013-10-15",
+        category: "Sostenibilidad Avanzada"
+    },
+    {
+        title: "Navegación de cabecera",
+        filename: "navegación-de-cabecera.html",
+        excerpt: "Principios de diseño UX/UI para navegación web. Optimización de la experiencia de usuario en interfaces digitales y arquitectura de información...",
+        date: "2023-09-10",
+        category: "UX/UI Design"
+    },
+    {
+        title: "Captura de pantalla: Análisis visual",
+        filename: "captura-de-pantalla-2023-11-26-a-las-185552.html",
+        excerpt: "Metodologías para análisis visual de interfaces y procesos digitales. Herramientas de documentación y comunicación visual en proyectos...",
+        date: "2023-11-26",
+        category: "Análisis Visual"
+    },
+    {
+        title: "Ricardo Peñalver: Perfil profesional",
+        filename: "ricardo-peñalver.html",
+        excerpt: "Compendio de experiencia profesional y trayectoria en transformación digital. Portfolio completo de competencias y logros en gestión pública...",
+        date: "2024-08-20",
+        category: "Perfil Profesional"
     }
 ];
 
