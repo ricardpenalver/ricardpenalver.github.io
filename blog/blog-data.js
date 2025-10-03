@@ -5,7 +5,8 @@ const blogArticles = [
         filename: "personalizando-mi-programa-formativo.html",
         excerpt: "Reflexiones sobre la educación personalizada y el uso de IA para crear programas formativos adaptados a las necesidades individuales. Del sistema tradicional memorístico a la formación a medida con inteligencia artificial...",
         date: "2025-01-04",
-        category: "Educación e IA"
+        category: "Educación e IA",
+        image: "/assets/images/blog/personalizando-programa-formativo.jpg"
     },
     {
         title: "Parar para Reconectar y Avanzar",
@@ -901,10 +902,14 @@ function formatDate(dateString) {
 }
 
 function createBlogCard(article) {
+    const imageContent = article.image
+        ? `<img src="${article.image}" alt="${article.title}" class="blog-card-image">`
+        : `<i class="fas fa-blog"></i>`;
+
     return `
         <article class="blog-card">
             <div class="blog-image">
-                <i class="fas fa-blog"></i>
+                ${imageContent}
             </div>
             <div class="blog-content">
                 <h3 class="blog-title">

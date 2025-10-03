@@ -781,6 +781,32 @@ body {
     justify-content: center;
     color: white;
     font-size: 3rem;
+    overflow: hidden;
+}
+
+.blog-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.blog-card:hover .blog-card-image {
+    transform: scale(1.05);
+}
+
+/* Featured image in blog posts */
+.article-featured-image {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.featured-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .blog-content {
