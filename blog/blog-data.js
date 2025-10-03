@@ -412,6 +412,111 @@ const blogArticles = [
         excerpt: "Compendio de experiencia profesional y trayectoria en transformación digital. Portfolio completo de competencias y logros en gestión pública...",
         date: "2024-08-20",
         category: "Perfil Profesional"
+    },
+    {
+        title: "El antídoto para la anestesia tecnológica",
+        filename: "el-antídoto-para-la-anestesia-tecnológica.html",
+        excerpt: "Reseña del libro 'Anestesiados' de Diego Hidalgo. Reflexión sobre el equilibrio entre tecnología y humanidad en la era digital contemporánea...",
+        date: "2024-05-26",
+        category: "Filosofía Tecnológica"
+    },
+    {
+        title: "Lecturas de Robin Sharma",
+        filename: "lecturas-de-robin-sharma.html",
+        excerpt: "Análisis de las obras de Robin Sharma sobre liderazgo y desarrollo personal. Compromisos y reflexiones para el crecimiento profesional y personal...",
+        date: "2024-01-13",
+        category: "Desarrollo Directivo"
+    },
+    {
+        title: "Formación ocupacional gratuita",
+        filename: "formación-ocupacional-gratuita.html",
+        excerpt: "Guía completa sobre oportunidades de formación gratuita para desempleados. Recursos públicos y estrategias para el desarrollo profesional continuo...",
+        date: "2013-08-26",
+        category: "Formación Profesional"
+    },
+    {
+        title: "Las seis cualidades necesarias de un emprendedor",
+        filename: "las-seis-cualidades-necesarias-de-un-emprendedor.html",
+        excerpt: "Análisis profundo de las competencias esenciales para el éxito empresarial. Emprender como forma de vida y actitud transformadora...",
+        date: "2014-01-26",
+        category: "Competencias Emprendedoras"
+    },
+    {
+        title: "Ley de emprendedores: más vale tarde que nunca",
+        filename: "ley-de-emprendedores-más-vale-tarde-que-nunca.html",
+        excerpt: "Análisis del Anteproyecto de Ley de Apoyo a los Emprendedores. Marco normativo español para el fomento del emprendimiento y lucha contra el desempleo...",
+        date: "2013-11-26",
+        category: "Legislación Empresarial"
+    },
+    {
+        title: "Pantalla de móvil en blanco y negro",
+        filename: "pantalla-de-móvil-en-blanco-y-negro.html",
+        excerpt: "Estrategias para reducir la adicción tecnológica y mejorar el bienestar digital. Técnicas de desintoxicación digital y uso consciente de dispositivos...",
+        date: "2023-12-05",
+        category: "Bienestar Digital Avanzado"
+    },
+    {
+        title: "Valoración artistas Vive Latino 2025",
+        filename: "valoración-artistas-vive-latino-2025.html",
+        excerpt: "Metodología de evaluación para artistas en festivales musicales. Aplicación de criterios objetivos y análisis de datos en la industria del entretenimiento...",
+        date: "2024-11-30",
+        category: "Gestión Cultural"
+    },
+    {
+        title: "Nuevas metodologías de trabajo colaborativo",
+        filename: "nuevas-metodologías-de-trabajo-colaborativo.html",
+        excerpt: "Implementación de frameworks ágiles y metodologías innovadoras para equipos distribuidos. Optimización de la productividad en entornos híbridos...",
+        date: "2023-10-15",
+        category: "Metodologías Ágiles"
+    },
+    {
+        title: "Transformación digital en administraciones públicas",
+        filename: "transformación-digital-en-administraciones-públicas.html",
+        excerpt: "Estrategias para la modernización tecnológica del sector público. Casos de éxito y metodologías para la implementación de servicios digitales ciudadanos...",
+        date: "2023-09-20",
+        category: "Gobierno Digital"
+    },
+    {
+        title: "Innovación en procesos administrativos",
+        filename: "innovación-en-procesos-administrativos.html",
+        excerpt: "Reingeniería de procesos burocráticos mediante tecnología. Simplificación administrativa y mejora de la experiencia ciudadana en servicios públicos...",
+        date: "2023-08-25",
+        category: "Innovación Pública"
+    },
+    {
+        title: "Gestión del cambio organizacional",
+        filename: "gestión-del-cambio-organizacional.html",
+        excerpt: "Metodologías para liderar transformaciones organizacionales exitosas. Gestión de resistencias y estrategias de comunicación en procesos de cambio...",
+        date: "2023-07-30",
+        category: "Change Management"
+    },
+    {
+        title: "Herramientas de productividad personal avanzada",
+        filename: "herramientas-de-productividad-personal-avanzada.html",
+        excerpt: "Ecosistema integrado de aplicaciones para optimización personal y profesional. Metodologías GTD y sistemas de organización digital avanzados...",
+        date: "2023-06-15",
+        category: "Productividad Avanzada"
+    },
+    {
+        title: "Liderazgo en la era post-digital",
+        filename: "liderazgo-en-la-era-post-digital.html",
+        excerpt: "Evolución del liderazgo en entornos tecnológicamente saturados. Competencias directivas para la gestión de equipos en la nueva normalidad digital...",
+        date: "2023-05-20",
+        category: "Liderazgo Digital"
+    },
+    {
+        title: "Sostenibilidad y responsabilidad corporativa",
+        filename: "sostenibilidad-y-responsabilidad-corporativa.html",
+        excerpt: "Integración de principios ESG en la estrategia empresarial. Modelos de negocio sostenibles y su impacto en la competitividad organizacional...",
+        date: "2023-04-25",
+        category: "Sostenibilidad Corporativa"
+    },
+    {
+        title: "Análisis de datos para la toma de decisiones",
+        filename: "análisis-de-datos-para-la-toma-de-decisiones.html",
+        excerpt: "Implementación de business intelligence y analytics en organizaciones. Transformación de datos en insights accionables para la estrategia empresarial...",
+        date: "2023-03-30",
+        category: "Business Intelligence"
     }
 ];
 
