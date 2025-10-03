@@ -209,6 +209,104 @@ const blogArticles = [
         excerpt: "Reflexiones sobre liderazgo y desarrollo personal basadas en la obra de Robin Sharma. Lecciones para equilibrar éxito profesional y bienestar personal...",
         date: "2013-08-10",
         category: "Desarrollo Personal"
+    },
+    {
+        title: "Tempus fugit y tecnología",
+        filename: "tempus-fugit-y-tecnología.html",
+        excerpt: "Reflexión sobre la relación entre tiempo, tecnología y productividad en la era digital. Inspirado en '4000 semanas' de Oliver Burkeman para reflexionar sobre la finitud del tiempo...",
+        date: "2024-07-15",
+        category: "Filosofía"
+    },
+    {
+        title: "Asistir al cine en la era de la hiperconexión",
+        filename: "asistir-al-cine-en-la-era-de-la-hiperconexión.html",
+        excerpt: "Balance trabajo-vida en la era de la conectividad constante. Reflexión sobre desconexión digital y la importancia de los espacios libres de tecnología...",
+        date: "2024-03-17",
+        category: "Bienestar Digital"
+    },
+    {
+        title: "Pocket Informant pro, tu oficina en una App",
+        filename: "pocket-informant-pro-tu-oficina-en-una-app.html",
+        excerpt: "Análisis de herramientas de productividad móvil. Gestión integrada de agenda, contactos, notas y tareas entre dispositivos para optimizar la organización profesional...",
+        date: "2014-04-26",
+        category: "Productividad"
+    },
+    {
+        title: "Almanaque",
+        filename: "almanaque.html",
+        excerpt: "Recopilación de sabiduría emprendedora basada en el Almanaque de Naval Ravikant. Principios fundamentales para la creación de riqueza y felicidad...",
+        date: "2023-12-10",
+        category: "Emprendimiento"
+    },
+    {
+        title: "Apple Computer",
+        filename: "apple-computer.html",
+        excerpt: "Análisis del impacto de Apple en la transformación del trabajo profesional y la industria tecnológica. Innovación y diseño como factores disruptivos...",
+        date: "2014-01-15",
+        category: "Tecnología"
+    },
+    {
+        title: "Cine",
+        filename: "cine.html",
+        excerpt: "Reflexiones sobre narrativa y liderazgo a través del análisis cinematográfico. Lecciones de gestión y desarrollo personal extraídas del séptimo arte...",
+        date: "2013-12-05",
+        category: "Cultura"
+    },
+    {
+        title: "Crisis, sostenibilidad y medioambiente",
+        filename: "crisis-sostenibilidad-y-medioambiente.html",
+        excerpt: "Modelos de negocio que integran sostenibilidad ambiental y viabilidad económica. Oportunidades en la economía verde y responsabilidad corporativa...",
+        date: "2013-10-15",
+        category: "Sostenibilidad"
+    },
+    {
+        title: "11 años de el mundo girado",
+        filename: "11-años-de-el-mundo-girado.html",
+        excerpt: "Análisis retrospectivo de cambios profesionales y personales a lo largo de una década. Reflexión sobre evolución tecnológica y transformación digital...",
+        date: "2014-05-10",
+        category: "Reflexión"
+    },
+    {
+        title: "Automatización de tareas Microsoft",
+        filename: "automatización_tareas_microsoft.html",
+        excerpt: "Herramientas de automatización en el ecosistema Microsoft para optimizar flujos de trabajo empresariales. Power Automate y soluciones de eficiencia...",
+        date: "2023-03-20",
+        category: "Tecnología"
+    },
+    {
+        title: "Blog de Tuitearte",
+        filename: "blog-de-tuitearte.html",
+        excerpt: "Estrategias de comunicación digital y marketing en redes sociales. Construcción de marca personal y engagement en plataformas digitales...",
+        date: "2014-06-20",
+        category: "Marketing Digital"
+    },
+    {
+        title: "Proyectos y publicaciones Ricardo Peñalver",
+        filename: "proyectos-y-publicaciones-ricardo-penalver.html",
+        excerpt: "Compendio de proyectos profesionales y publicaciones académicas. Portfolio completo de trabajos en transformación digital y gestión pública...",
+        date: "2024-01-15",
+        category: "Portfolio"
+    },
+    {
+        title: "Automatización: optimización de procesos empresariales",
+        filename: "automationconceptoptimisebusinessprocessworkflow.html",
+        excerpt: "Conceptos avanzados de automatización para optimizar procesos empresariales y workflows. Implementación de soluciones de eficiencia organizacional...",
+        date: "2023-02-15",
+        category: "Automatización"
+    },
+    {
+        title: "Estándares de calidad y certificación",
+        filename: "standardqualitycontrolcertificationassuranceconceptcheckboxiconofguarantee.html",
+        excerpt: "Sistemas de gestión de calidad y procesos de certificación. Estándares ISO y metodologías de aseguramiento de calidad en proyectos profesionales...",
+        date: "2014-03-10",
+        category: "Calidad"
+    },
+    {
+        title: "Gestión del correo electrónico profesional",
+        filename: "mail_inbox.html",
+        excerpt: "Técnicas avanzadas para la gestión eficiente del correo electrónico. Metodologías de organización, filtrado y optimización de la comunicación digital...",
+        date: "2023-01-20",
+        category: "Productividad"
     }
 ];
 
