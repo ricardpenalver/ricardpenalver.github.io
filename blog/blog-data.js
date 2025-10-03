@@ -517,6 +517,356 @@ const blogArticles = [
         excerpt: "Implementación de business intelligence y analytics en organizaciones. Transformación de datos en insights accionables para la estrategia empresarial...",
         date: "2023-03-30",
         category: "Business Intelligence"
+    },
+    {
+        title: "Metodologías ágiles en administraciones públicas",
+        filename: "metodologías-ágiles-en-administraciones-públicas.html",
+        excerpt: "Implementación de Scrum y Kanban en entornos gubernamentales. Adaptación de frameworks ágiles para mejorar la eficiencia de servicios públicos...",
+        date: "2023-02-25",
+        category: "Agilidad Pública"
+    },
+    {
+        title: "Ciberseguridad en el sector público",
+        filename: "ciberseguridad-en-el-sector-público.html",
+        excerpt: "Estrategias de protección de datos y sistemas críticos gubernamentales. Marco de seguridad nacional y protección de información ciudadana...",
+        date: "2023-01-30",
+        category: "Seguridad Digital"
+    },
+    {
+        title: "Interoperabilidad de sistemas gubernamentales",
+        filename: "interoperabilidad-de-sistemas-gubernamentales.html",
+        excerpt: "Arquitecturas tecnológicas para la integración de servicios públicos. Estándares y protocolos para la comunicación entre administraciones...",
+        date: "2022-12-15",
+        category: "Arquitectura Gubernamental"
+    },
+    {
+        title: "Participación ciudadana digital",
+        filename: "participación-ciudadana-digital.html",
+        excerpt: "Plataformas y herramientas para fomentar la participación democrática online. Innovación en procesos de consulta pública y transparencia...",
+        date: "2022-11-20",
+        category: "Democracia Digital"
+    },
+    {
+        title: "Gestión de proyectos en transformación digital",
+        filename: "gestión-de-proyectos-en-transformación-digital.html",
+        excerpt: "Metodologías PM específicas para proyectos de digitalización. Gestión de riesgos y stakeholders en transformaciones tecnológicas complejas...",
+        date: "2022-10-25",
+        category: "Project Management Digital"
+    },
+    {
+        title: "Inteligencia artificial en servicios públicos",
+        filename: "inteligencia-artificial-en-servicios-públicos.html",
+        excerpt: "Aplicaciones éticas de IA en administraciones públicas. Automatización inteligente de procesos burocráticos y mejora de la atención ciudadana...",
+        date: "2022-09-30",
+        category: "IA Gubernamental"
+    },
+    {
+        title: "Evaluación de políticas públicas digitales",
+        filename: "evaluación-de-políticas-públicas-digitales.html",
+        excerpt: "Métricas y KPIs para medir el impacto de iniciativas digitales. Metodologías de evaluación de transformaciones gubernamentales...",
+        date: "2022-08-15",
+        category: "Evaluación Pública"
+    },
+    {
+        title: "Diseño de servicios centrados en el ciudadano",
+        filename: "diseño-de-servicios-centrados-en-el-ciudadano.html",
+        excerpt: "Metodologías de design thinking aplicadas al sector público. User experience en servicios gubernamentales y journey mapping ciudadano...",
+        date: "2022-07-20",
+        category: "Service Design Público"
+    },
+    {
+        title: "Blockchain en administraciones públicas",
+        filename: "blockchain-en-administraciones-públicas.html",
+        excerpt: "Aplicaciones de tecnología blockchain para transparencia y trazabilidad gubernamental. Casos de uso en votación, registros y certificaciones...",
+        date: "2022-06-25",
+        category: "Blockchain Gubernamental"
+    },
+    {
+        title: "Gestión del talento en organizaciones públicas",
+        filename: "gestión-del-talento-en-organizaciones-públicas.html",
+        excerpt: "Estrategias de atracción y retención de talento tecnológico en el sector público. Desarrollo de capacidades digitales en funcionarios...",
+        date: "2022-05-30",
+        category: "Talento Público"
+    },
+    {
+        title: "Open data y transparencia gubernamental",
+        filename: "open-data-y-transparencia-gubernamental.html",
+        excerpt: "Implementación de políticas de datos abiertos. Plataformas de transparencia y acceso a información pública para el empoderamiento ciudadano...",
+        date: "2022-04-15",
+        category: "Transparencia Digital"
+    },
+    {
+        title: "Cloud computing en el sector público",
+        filename: "cloud-computing-en-el-sector-público.html",
+        excerpt: "Migración a la nube de infraestructuras gubernamentales. Estrategias de cloud híbrido y consideraciones de seguridad en entornos públicos...",
+        date: "2022-03-20",
+        category: "Cloud Público"
+    },
+    {
+        title: "Comunicación digital institucional",
+        filename: "comunicación-digital-institucional.html",
+        excerpt: "Estrategias de comunicación multicanal para administraciones públicas. Gestión de crisis digitales y construcción de confianza ciudadana...",
+        date: "2022-02-25",
+        category: "Comunicación Institucional"
+    },
+    {
+        title: "Innovación abierta en el sector público",
+        filename: "innovación-abierta-en-el-sector-público.html",
+        excerpt: "Metodologías de co-creación con ciudadanos y empresas. Laboratorios de innovación pública y ecosistemas colaborativos de soluciones...",
+        date: "2022-01-30",
+        category: "Innovación Abierta"
+    },
+    {
+        title: "Ética en la transformación digital pública",
+        filename: "ética-en-la-transformación-digital-pública.html",
+        excerpt: "Principios éticos para la digitalización gubernamental. Consideraciones sobre privacidad, equidad digital y derechos ciudadanos en la era digital...",
+        date: "2021-12-15",
+        category: "Ética Digital"
+    },
+    {
+        title: "Ecosistemas digitales territoriales",
+        filename: "ecosistemas-digitales-territoriales.html",
+        excerpt: "Desarrollo de smart cities y territorios conectados. Integración de IoT, big data y servicios ciudadanos para ciudades inteligentes...",
+        date: "2021-11-20",
+        category: "Smart Cities"
+    },
+    {
+        title: "Capacitación digital para funcionarios",
+        filename: "capacitación-digital-para-funcionarios.html",
+        excerpt: "Programas de formación en competencias digitales para empleados públicos. Metodologías de upskilling y reskilling en administraciones...",
+        date: "2021-10-25",
+        category: "Formación Digital Pública"
+    },
+    {
+        title: "Presupuestos participativos digitales",
+        filename: "presupuestos-participativos-digitales.html",
+        excerpt: "Plataformas tecnológicas para la participación ciudadana en decisiones presupuestarias. Democratización de la gestión pública municipal...",
+        date: "2021-09-30",
+        category: "Participación Presupuestaria"
+    },
+    {
+        title: "Analítica de datos para políticas públicas",
+        filename: "analítica-de-datos-para-políticas-públicas.html",
+        excerpt: "Big data analytics aplicado al diseño de políticas públicas. Evidence-based policy making y toma de decisiones basada en datos...",
+        date: "2021-08-15",
+        category: "Policy Analytics"
+    },
+    {
+        title: "Automatización robótica de procesos públicos",
+        filename: "automatización-robótica-de-procesos-públicos.html",
+        excerpt: "Implementación de RPA en administraciones públicas. Automatización de tareas repetitivas y optimización de flujos de trabajo burocráticos...",
+        date: "2021-07-20",
+        category: "RPA Público"
+    },
+    {
+        title: "Identidad digital ciudadana",
+        filename: "identidad-digital-ciudadana.html",
+        excerpt: "Sistemas de identificación digital segura para ciudadanos. DNI electrónico, firma digital y autenticación multi-factor en servicios públicos...",
+        date: "2021-06-25",
+        category: "Identidad Digital"
+    },
+    {
+        title: "Contratación pública electrónica",
+        filename: "contratación-pública-electrónica.html",
+        excerpt: "Digitalización de procesos de licitación y contratación pública. Plataformas electrónicas para transparencia y eficiencia en compras gubernamentales...",
+        date: "2021-05-30",
+        category: "e-Procurement"
+    },
+    {
+        title: "Modelos de madurez digital gubernamental",
+        filename: "modelos-de-madurez-digital-gubernamental.html",
+        excerpt: "Frameworks para evaluar el nivel de digitalización de administraciones públicas. Roadmaps de transformación y benchmarking digital...",
+        date: "2021-04-15",
+        category: "Madurez Digital"
+    },
+    {
+        title: "Gobierno como plataforma",
+        filename: "gobierno-como-plataforma.html",
+        excerpt: "Arquitecturas de gobierno digital basadas en APIs y servicios reutilizables. Ecosistemas de innovación sobre infraestructuras públicas...",
+        date: "2021-03-20",
+        category: "Government as a Platform"
+    },
+    {
+        title: "Resiliencia digital en administraciones",
+        filename: "resiliencia-digital-en-administraciones.html",
+        excerpt: "Estrategias de continuidad de negocio y recuperación ante desastres digitales. Arquitecturas resilientes para servicios públicos críticos...",
+        date: "2021-02-25",
+        category: "Resiliencia Digital"
+    },
+    {
+        title: "Machine learning para administraciones",
+        filename: "machine-learning-para-administraciones.html",
+        excerpt: "Aplicaciones de aprendizaje automático en la gestión pública. Predicción de demanda de servicios y optimización de recursos gubernamentales...",
+        date: "2021-01-30",
+        category: "Machine Learning Público"
+    },
+    {
+        title: "APIs y microservicios en el gobierno",
+        filename: "apis-y-microservicios-en-el-gobierno.html",
+        excerpt: "Arquitecturas de microservicios para servicios públicos escalables. Diseño e implementación de APIs gubernamentales para integración de sistemas...",
+        date: "2020-12-15",
+        category: "Arquitectura de Software"
+    },
+    {
+        title: "Experiencia de usuario en portales gubernamentales",
+        filename: "experiencia-de-usuario-en-portales-gubernamentales.html",
+        excerpt: "Diseño UX específico para sitios web gubernamentales. Principios de usabilidad y accesibilidad para servicios públicos digitales...",
+        date: "2020-11-20",
+        category: "UX Gubernamental"
+    },
+    {
+        title: "Transformación cultural en organizaciones públicas",
+        filename: "transformación-cultural-en-organizaciones-públicas.html",
+        excerpt: "Gestión del cambio cultural para la adopción de tecnologías digitales. Superación de resistencias y desarrollo de mindset digital en funcionarios...",
+        date: "2020-10-25",
+        category: "Cultura Digital"
+    },
+    {
+        title: "Internet de las cosas en ciudades inteligentes",
+        filename: "internet-de-las-cosas-en-ciudades-inteligentes.html",
+        excerpt: "Implementación de IoT para monitoreo urbano y servicios ciudadanos. Sensores, conectividad y plataformas de gestión de datos urbanos...",
+        date: "2020-09-30",
+        category: "IoT Urbano"
+    },
+    {
+        title: "Gamificación en servicios públicos",
+        filename: "gamificación-en-servicios-públicos.html",
+        excerpt: "Aplicación de mecánicas de juego para mejorar el engagement ciudadano. Diseño de experiencias lúdicas en procesos administrativos...",
+        date: "2020-08-15",
+        category: "Gamificación Pública"
+    },
+    {
+        title: "Realidad virtual y aumentada en gobierno",
+        filename: "realidad-virtual-y-aumentada-en-gobierno.html",
+        excerpt: "Aplicaciones de VR/AR en formación de funcionarios y servicios ciudadanos. Simulaciones para entrenamiento y visualización de datos públicos...",
+        date: "2020-07-20",
+        category: "Realidad Extendida"
+    },
+    {
+        title: "5G y conectividad para administraciones",
+        filename: "5g-y-conectividad-para-administraciones.html",
+        excerpt: "Impacto de las redes 5G en servicios públicos. Nuevas oportunidades de conectividad para IoT gubernamental y servicios móviles...",
+        date: "2020-06-25",
+        category: "Conectividad 5G"
+    },
+    {
+        title: "Quantum computing en el sector público",
+        filename: "quantum-computing-en-el-sector-público.html",
+        excerpt: "Potencial de la computación cuántica para resolver problemas complejos gubernamentales. Aplicaciones en criptografía y optimización pública...",
+        date: "2020-05-30",
+        category: "Computación Cuántica"
+    },
+    {
+        title: "Edge computing para servicios distribuidos",
+        filename: "edge-computing-para-servicios-distribuidos.html",
+        excerpt: "Procesamiento distribuido en el borde para servicios públicos de baja latencia. Arquitecturas edge para aplicaciones gubernamentales críticas...",
+        date: "2020-04-15",
+        category: "Edge Computing"
+    },
+    {
+        title: "Robótica en administraciones públicas",
+        filename: "robótica-en-administraciones-públicas.html",
+        excerpt: "Implementación de robots para atención ciudadana y tareas administrativas. Automatización física de procesos en oficinas públicas...",
+        date: "2020-03-20",
+        category: "Robótica Pública"
+    },
+    {
+        title: "Chatbots e inteligencia conversacional",
+        filename: "chatbots-e-inteligencia-conversacional.html",
+        excerpt: "Asistentes virtuales para atención ciudadana 24/7. Diseño de conversaciones y NLP para servicios públicos automatizados...",
+        date: "2020-02-25",
+        category: "IA Conversacional"
+    },
+    {
+        title: "DevOps en administraciones públicas",
+        filename: "devops-en-administraciones-públicas.html",
+        excerpt: "Implementación de prácticas DevOps para desarrollo ágil de software gubernamental. CI/CD y automatización de despliegues en entornos públicos...",
+        date: "2020-01-30",
+        category: "DevOps Público"
+    },
+    {
+        title: "Arquitecturas serverless para gobierno",
+        filename: "arquitecturas-serverless-para-gobierno.html",
+        excerpt: "Computación sin servidor para servicios públicos escalables. Funciones como servicio y arquitecturas event-driven en el gobierno...",
+        date: "2019-12-15",
+        category: "Serverless Público"
+    },
+    {
+        title: "Monitoreo y observabilidad de sistemas públicos",
+        filename: "monitoreo-y-observabilidad-de-sistemas-públicos.html",
+        excerpt: "Estrategias de monitoring para servicios críticos gubernamentales. Métricas, logs y trazas para garantizar la disponibilidad de servicios públicos...",
+        date: "2019-11-20",
+        category: "Observabilidad"
+    },
+    {
+        title: "Migración legacy en administraciones",
+        filename: "migración-legacy-en-administraciones.html",
+        excerpt: "Estrategias para modernizar sistemas heredados gubernamentales. Metodologías de migración segura y continuidad de servicios críticos...",
+        date: "2019-10-25",
+        category: "Modernización Legacy"
+    },
+    {
+        title: "Testing y calidad en software público",
+        filename: "testing-y-calidad-en-software-público.html",
+        excerpt: "Aseguramiento de calidad específico para aplicaciones gubernamentales. Testing de carga, seguridad y usabilidad en servicios públicos...",
+        date: "2019-09-30",
+        category: "Quality Assurance"
+    },
+    {
+        title: "Documentación técnica en proyectos públicos",
+        filename: "documentación-técnica-en-proyectos-públicos.html",
+        excerpt: "Estándares de documentación para proyectos tecnológicos gubernamentales. Trazabilidad, mantenibilidad y transferencia de conocimiento...",
+        date: "2019-08-15",
+        category: "Documentación Técnica"
+    },
+    {
+        title: "Metodologías de prototipado rápido",
+        filename: "metodologías-de-prototipado-rápido.html",
+        excerpt: "Técnicas de prototipado para validar soluciones gubernamentales. Design thinking y lean startup aplicados al sector público...",
+        date: "2019-07-20",
+        category: "Prototipado"
+    },
+    {
+        title: "Arquitecturas de datos para el gobierno",
+        filename: "arquitecturas-de-datos-para-el-gobierno.html",
+        excerpt: "Diseño de data lakes y warehouses para administraciones públicas. Gobernanza de datos y arquitecturas para analytics gubernamental...",
+        date: "2019-06-25",
+        category: "Arquitectura de Datos"
+    },
+    {
+        title: "Gestión de incidentes en servicios críticos",
+        filename: "gestión-de-incidentes-en-servicios-críticos.html",
+        excerpt: "Protocolos de respuesta ante incidentes en servicios públicos digitales. Planes de contingencia y recuperación para infraestructuras críticas...",
+        date: "2019-05-30",
+        category: "Gestión de Incidentes"
+    },
+    {
+        title: "Metodologías lean para innovación pública",
+        filename: "metodologías-lean-para-innovación-pública.html",
+        excerpt: "Aplicación de principios lean startup en laboratorios de innovación gubernamental. Experimentación rápida y validación de hipótesis públicas...",
+        date: "2019-04-15",
+        category: "Lean Government"
+    },
+    {
+        title: "Compliance y auditoría de sistemas públicos",
+        filename: "compliance-y-auditoría-de-sistemas-públicos.html",
+        excerpt: "Frameworks de cumplimiento normativo para tecnología gubernamental. Auditorías de seguridad y conformidad regulatoria en administraciones...",
+        date: "2019-03-20",
+        category: "Compliance Digital"
+    },
+    {
+        title: "Integración de sistemas heterogéneos",
+        filename: "integración-de-sistemas-heterogéneos.html",
+        excerpt: "Estrategias de integración para ecosistemas tecnológicos gubernamentales diversos. Middleware y buses de servicios para administraciones...",
+        date: "2019-02-25",
+        category: "Integración de Sistemas"
+    },
+    {
+        title: "Performance optimization en aplicaciones públicas",
+        filename: "performance-optimization-en-aplicaciones-públicas.html",
+        excerpt: "Optimización de rendimiento para aplicaciones gubernamentales de alto tráfico. Técnicas de caching, CDN y escalabilidad horizontal...",
+        date: "2019-01-30",
+        category: "Optimización Performance"
     }
 ];
 
