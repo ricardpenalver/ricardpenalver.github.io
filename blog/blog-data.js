@@ -1,6 +1,13 @@
 // Blog articles data with metadata
 const blogArticles = [
     {
+        title: "Personalizando(me) mi programa formativo",
+        filename: "personalizando-mi-programa-formativo.html",
+        excerpt: "Reflexiones sobre la educación personalizada y el uso de IA para crear programas formativos adaptados a las necesidades individuales. Del sistema tradicional memorístico a la formación a medida con inteligencia artificial...",
+        date: "2025-01-04",
+        category: "Educación e IA"
+    },
+    {
         title: "Parar para Reconectar y Avanzar",
         filename: "parar-para-reconectar-y-avanzar.html",
         excerpt: "Reflexiones sobre la importancia de hacer pausas en nuestra vida profesional para reconectar con nuestros objetivos...",
