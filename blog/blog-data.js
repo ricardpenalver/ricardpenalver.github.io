@@ -111,6 +111,104 @@ const blogArticles = [
         excerpt: "El concepto de MVP (Minimum Viable Product) es fundamental en el desarrollo de productos digitales...",
         date: "2014-04-20",
         category: "Desarrollo"
+    },
+    {
+        title: "Comunicación, confianza y respeto",
+        filename: "comunicación-confianza-y-respeto.html",
+        excerpt: "La fórmula del trabajo en equipo. Pilares fundamentales para relaciones profesionales efectivas en entornos colaborativos y equipos de alto rendimiento...",
+        date: "2024-11-24",
+        category: "Desarrollo Profesional"
+    },
+    {
+        title: "Mejora tu productividad con la eficiencia automatizada",
+        filename: "mejora-tu-productividad-con-la-eficiencia-automatizada.html",
+        excerpt: "El tiempo es un recurso valioso y finito. Estrategias de automatización inteligente para liberar tiempo creativo y optimizar flujos de trabajo profesionales...",
+        date: "2023-07-08",
+        category: "Productividad"
+    },
+    {
+        title: "7 consejos para escribir correctamente un email profesional",
+        filename: "7-consejos-para-escribir-correctamente-un-email-profesional.html",
+        excerpt: "Buenas prácticas para comunicación profesional por email: estructura, claridad y etiqueta para maximizar efectividad en el entorno laboral...",
+        date: "2014-07-26",
+        category: "Productividad"
+    },
+    {
+        title: "Conectar para aprender",
+        filename: "conectar-para-aprender.html",
+        excerpt: "Networking como herramienta de aprendizaje continuo y crecimiento profesional. La importancia de las conexiones humanas en el desarrollo de carrera...",
+        date: "2014-08-15",
+        category: "Desarrollo Profesional"
+    },
+    {
+        title: "Consejos para maquetar tu curriculum vitae",
+        filename: "consejos-para-maquetar-tu-curriculum-vitae.html",
+        excerpt: "Guía práctica para diseñar CVs efectivos que destaquen competencias y experiencia. Principios de diseño y estructura para captar atención de reclutadores...",
+        date: "2014-06-15",
+        category: "Desarrollo Profesional"
+    },
+    {
+        title: "Cómo hacerse autónomo en España",
+        filename: "cómo-hacerse-autónomo-en-españa.html",
+        excerpt: "Guía práctica para el proceso de alta como trabajador autónomo en España. Pasos, documentación y consideraciones legales y fiscales esenciales...",
+        date: "2014-05-20",
+        category: "Emprendimiento"
+    },
+    {
+        title: "Email marketing para emprendedores",
+        filename: "email-marketing-para-emprendedores.html",
+        excerpt: "Estrategias de email marketing para startups y emprendedores: construcción de audiencia, segmentación y técnicas de conversión efectivas...",
+        date: "2013-11-15",
+        category: "Marketing"
+    },
+    {
+        title: "4000 semanas",
+        filename: "4000-semanas.html",
+        excerpt: "Perspectiva sobre gestión del tiempo considerando la finitud de la vida profesional. Reflexión profunda sobre productividad y propósito vital...",
+        date: "2023-06-20",
+        category: "Productividad"
+    },
+    {
+        title: "Productividad integrando tecnología en el día a día",
+        filename: "productividad-integrando-tecnologia-en-el-dia-a-dia.html",
+        excerpt: "Estrategias para integrar herramientas tecnológicas en rutinas profesionales sin perder el factor humano. Balance entre eficiencia y bienestar...",
+        date: "2023-05-15",
+        category: "Productividad"
+    },
+    {
+        title: "Integrando humanidad y tecnología",
+        filename: "integrando-humanidad-y-tecnología.html",
+        excerpt: "Balance entre avance tecnológico y valores humanos en el entorno profesional moderno. Reflexión sobre el futuro del trabajo humanizado...",
+        date: "2023-04-10",
+        category: "Tecnología"
+    },
+    {
+        title: "5 apps para aprender idiomas en tu tiempo libre",
+        filename: "5-apps-para-aprender-idiomas-en-tu-tiempo-libre.html",
+        excerpt: "Herramientas móviles para aprendizaje de idiomas optimizando tiempos muertos. Comparativa de aplicaciones y metodologías de aprendizaje efectivas...",
+        date: "2014-03-25",
+        category: "Desarrollo Personal"
+    },
+    {
+        title: "5 App para aprender inglés",
+        filename: "5-app-para-aprender-inglés.html",
+        excerpt: "Selección especializada de aplicaciones móviles para dominar el inglés. Análisis detallado de funcionalidades y efectividad de cada herramienta...",
+        date: "2014-02-18",
+        category: "Desarrollo Personal"
+    },
+    {
+        title: "Crisis, emprendedores y sostenibilidad",
+        filename: "crisis-emprendedores-y-sostenibilidad.html",
+        excerpt: "Oportunidades de negocio sostenible en contextos de crisis económica. Cómo convertir desafíos globales en oportunidades emprendedoras responsables...",
+        date: "2013-09-20",
+        category: "Emprendimiento"
+    },
+    {
+        title: "El monje que vendió su Ferrari",
+        filename: "el-monje-que-vendió-su-ferrari.html",
+        excerpt: "Reflexiones sobre liderazgo y desarrollo personal basadas en la obra de Robin Sharma. Lecciones para equilibrar éxito profesional y bienestar personal...",
+        date: "2013-08-10",
+        category: "Desarrollo Personal"
     }
 ];
 
