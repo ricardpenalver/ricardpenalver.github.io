@@ -4,12 +4,25 @@
 class ModernContactForm {
     constructor() {
         this.form = document.getElementById('modernContactForm');
+
+        // Verificar que el formulario existe
+        if (!this.form) {
+            console.error('Formulario modernContactForm no encontrado');
+            return;
+        }
+
         this.progressBar = document.querySelector('.progress-bar');
         this.successModal = document.getElementById('successModal');
         this.submitBtn = this.form.querySelector('button[type="submit"]');
         this.btnText = document.getElementById('btn-text');
         this.btnIcon = document.getElementById('btn-icon');
         this.btnSpinner = document.getElementById('btn-spinner');
+
+        // Verificar elementos críticos
+        if (!this.submitBtn) {
+            console.error('Botón de envío no encontrado');
+            return;
+        }
 
         this.fields = {
             required: ['firstName', 'lastName', 'email', 'projectType', 'projectDescription'],
@@ -539,7 +552,13 @@ function closeSuccessModal() {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    window.modernForm = new ModernContactForm();
+    try {
+        console.log('Inicializando formulario moderno...');
+        window.modernForm = new ModernContactForm();
+        console.log('Formulario inicializado correctamente');
+    } catch (error) {
+        console.error('Error al inicializar el formulario:', error);
+    }
 });
 
 // Add some additional modern interactions
