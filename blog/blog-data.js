@@ -4,7 +4,7 @@ const blogArticles = [
         title: "Personalizando(me) mi programa formativo",
         filename: "personalizando-mi-programa-formativo.html",
         excerpt: "Reflexiones sobre la educación personalizada y el uso de IA para crear programas formativos adaptados a las necesidades individuales. Del sistema tradicional memorístico a la formación a medida con inteligencia artificial...",
-        date: "2025-01-04",
+        date: "2025-10-04",
         category: "Educación e IA",
         image: "/assets/images/blog/personalizando-programa-formativo.jpg"
     },

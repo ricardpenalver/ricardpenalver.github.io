@@ -9,10 +9,21 @@
     "start": "echo 'Static HTML site - serve files directly'",
     "vercel-build": "echo 'Static site deployment'"
   },
-  "keywords": ["personal", "website", "static", "html", "css", "javascript"],
+  "keywords": [
+    "personal",
+    "website",
+    "static",
+    "html",
+    "css",
+    "javascript"
+  ],
   "author": "Ricardo Peñalver",
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.19.1",
+    "shadcn-mcp": "^1.0.0"
   }
 }

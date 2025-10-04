@@ -466,3 +466,4 @@ Después de cada push, verificar que ambas URLs funcionen correctamente:
 **Desarrollado con**: Cursor + Claude
 **Hosted en**: Vercel
 **Licencia**: MIT
+- acuerdate de donde lo dejamos. Mañana continuamos
