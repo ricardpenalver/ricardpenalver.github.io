@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Ricardo Peñalver García</title>
+    <meta name="description" content="Contacta con Ricardo Peñalver García - Desarrollador Full Stack & Diseñador UX/UI">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#6366f1',
+                        'primary-dark': '#4f46e5',
+                        'secondary': '#64748b',
+                        'accent': '#f59e0b',
+                        'success': '#10b981',
+                        'error': '#ef4444',
+                        'warning': '#f59e0b',
+                        'info': '#3b82f6'
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'scale-in': 'scaleIn 0.3s ease-out'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.95)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        }
+                    },
+                    backdropBlur: {
+                        'xs': '2px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Floating label effect */
+        .floating-label {
+            position: relative;
+        }
+
+        .floating-label input:focus + label,
+        .floating-label input:not(:placeholder-shown) + label,
+        .floating-label textarea:focus + label,
+        .floating-label textarea:not(:placeholder-shown) + label,
+        .floating-label select:focus + label,
+        .floating-label select:not([value=""]) + label {
+            transform: translateY(-1.5rem) scale(0.875);
+            color: #6366f1;
+        }
+
+        .floating-label label {
+            position: absolute;
+            left: 0.75rem;
+            top: 0.75rem;
+            pointer-events: none;
+            transition: all 0.2s ease-out;
+            background: white;
+            padding: 0 0.25rem;
+            z-index: 10;
+        }
+
+        /* Glass morphism effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Gradient background */
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* Custom scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #6366f1;
+            border-radius: 3px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #4f46e5;
+        }
+
+        /* Input focus effects */
+        .modern-input:focus {
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+            border-color: #6366f1;
+        }
+
+        /* Submit button gradient */
+        .btn-gradient {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Card hover effect */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+            border-radius: 2px;
+            animation: progress 2s ease-in-out infinite;
+        }
+
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        /* Ripple effect */
+        .ripple {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .ripple:active::before {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../" class="logo">Ricardo Peñalver García</a>
+            <ul class="nav-menu">
+                <li><a href="../" class="nav-link">Inicio</a></li>
+                <li><a href="perfil.html" class="nav-link">Sobre Mí</a></li>
+                <li><a href="mis-proyectos.html" class="nav-link">Proyectos</a></li>
+                <li><a href="../blog/" class="nav-link">Blog</a></li>
+                <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Gradient Background -->
+    <section class="gradient-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Floating Elements -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-20 left-10 w-20 h-20 bg-white bg-opacity-10 rounded-full animate-float"></div>
+            <div class="absolute top-40 right-20 w-16 h-16 bg-white bg-opacity-20 rounded-full animate-float" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-32 left-20 w-12 h-12 bg-white bg-opacity-15 rounded-full animate-float" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-20 right-10 w-24 h-24 bg-white bg-opacity-5 rounded-full animate-float" style="animation-delay: 0.5s;"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 py-20 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-16 animate-fade-in">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+                    ¿Hablamos?
+                    <span class="inline-block animate-bounce-slow">👋</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white text-opacity-90 max-w-3xl mx-auto leading-relaxed">
+                    Transformemos ideas en realidad digital. Cuéntame tu proyecto y
+                    <span class="font-semibold">creemos algo increíble juntos</span>
+                </p>
+                <div class="mt-8 flex justify-center">
+                    <div class="w-24 h-1 bg-white bg-opacity-50 rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Contact Information Cards -->
+                <div class="lg:col-span-1 space-y-6">
+                    <!-- Quick Contact Card -->
+                    <div class="glass rounded-2xl p-6 card-hover animate-slide-up">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-bolt text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Respuesta Rápida</h3>
+                            <p class="text-white text-opacity-80 text-sm mb-4">
+                                Te respondo en menos de 4 horas en días laborables
+                            </p>
+                            <div class="flex justify-center space-x-4">
+                                <a href="mailto:ricardopenalver@icloud.com"
+                                   class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </a>
+                                <a href="tel:+34656285846"
+                                   class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300">
+                                    <i class="fas fa-phone text-white"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/ricardpenalver"
+                                   class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300">
+                                    <i class="fab fa-linkedin text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats Card -->
+                    <div class="glass rounded-2xl p-6 card-hover animate-slide-up" style="animation-delay: 0.2s;">
+                        <h3 class="text-lg font-semibold text-white mb-4 text-center">
+                            <i class="fas fa-chart-line mr-2"></i>En números
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-white text-opacity-80">Proyectos completados</span>
+                                <span class="text-white font-bold text-xl">50+</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-white text-opacity-80">Años de experiencia</span>
+                                <span class="text-white font-bold text-xl">15+</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-white text-opacity-80">Satisfacción cliente</span>
+                                <span class="text-white font-bold text-xl">100%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-white text-opacity-80">Respuesta promedio</span>
+                                <span class="text-white font-bold text-xl">2h</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technologies Card -->
+                    <div class="glass rounded-2xl p-6 card-hover animate-slide-up" style="animation-delay: 0.4s;">
+                        <h3 class="text-lg font-semibold text-white mb-4 text-center">
+                            <i class="fas fa-code mr-2"></i>Especialidades
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white bg-opacity-20 rounded-full text-white text-xs">React</span>
+                            <span class="px-3 py-1 bg-white bg-opacity-20 rounded-full text-white text-xs">Node.js</span>
+                            <span class="px-3 py-1 bg-white bg-opacity-20 rounded-full text-white text-xs">TypeScript</span>
+                            <span class="px-3 py-1 bg-white bg-opacity-20 rounded-full text-white text-xs">Python</span>
+                            <span class="px-3 py-1 bg-white bg-opacity-20 rounded-full text-white text-xs">UX/UI</span>
+                            <span class="px-3 py-1 bg-white bg-opacity-20 rounded-full text-white text-xs">DevOps</span>
+                            <span class="px-3 py-1 bg-white bg-opacity-20 rounded-full text-white text-xs">Cloud</span>
+                            <span class="px-3 py-1 bg-white bg-opacity-20 rounded-full text-white text-xs">AI/ML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modern Contact Form -->
+                <div class="lg:col-span-2">
+                    <div class="glass rounded-3xl p-8 card-hover animate-scale-in" style="animation-delay: 0.6s;">
+                        <div class="text-center mb-8">
+                            <h2 class="text-3xl font-bold text-white mb-3">Cuéntame tu proyecto</h2>
+                            <p class="text-white text-opacity-80">
+                                Completa el formulario y te contactaré en las próximas horas
+                            </p>
+                        </div>
+
+                        <form id="modernContactForm" class="space-y-6" novalidate>
+                            <!-- Progress Bar -->
+                            <div id="form-progress" class="w-full bg-white bg-opacity-20 rounded-full h-1 mb-6">
+                                <div class="progress-bar h-1 rounded-full" style="width: 0%;"></div>
+                            </div>
+
+                            <!-- Personal Information -->
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="floating-label">
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        name="firstName"
+                                        placeholder=" "
+                                        required
+                                        minlength="2"
+                                        class="modern-input w-full px-4 py-3 bg-white bg-opacity-90 border border-white border-opacity-30 rounded-xl focus:outline-none transition-all duration-300 text-gray-800"
+                                    />
+                                    <label for="firstName" class="text-gray-600 font-medium">Nombre *</label>
+                                    <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                                </div>
+                                <div class="floating-label">
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        name="lastName"
+                                        placeholder=" "
+                                        required
+                                        minlength="2"
+                                        class="modern-input w-full px-4 py-3 bg-white bg-opacity-90 border border-white border-opacity-30 rounded-xl focus:outline-none transition-all duration-300 text-gray-800"
+                                    />
+                                    <label for="lastName" class="text-gray-600 font-medium">Apellidos *</label>
+                                    <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Information -->
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="floating-label">
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder=" "
+                                        required
+                                        class="modern-input w-full px-4 py-3 bg-white bg-opacity-90 border border-white border-opacity-30 rounded-xl focus:outline-none transition-all duration-300 text-gray-800"
+                                    />
+                                    <label for="email" class="text-gray-600 font-medium">Email *</label>
+                                    <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                                </div>
+                                <div class="floating-label">
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        placeholder=" "
+                                        class="modern-input w-full px-4 py-3 bg-white bg-opacity-90 border border-white border-opacity-30 rounded-xl focus:outline-none transition-all duration-300 text-gray-800"
+                                    />
+                                    <label for="phone" class="text-gray-600 font-medium">Teléfono</label>
+                                    <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                                </div>
+                            </div>
+
+                            <!-- Company and Budget -->
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="floating-label">
+                                    <input
+                                        type="text"
+                                        id="company"
+                                        name="company"
+                                        placeholder=" "
+                                        class="modern-input w-full px-4 py-3 bg-white bg-opacity-90 border border-white border-opacity-30 rounded-xl focus:outline-none transition-all duration-300 text-gray-800"
+                                    />
+                                    <label for="company" class="text-gray-600 font-medium">Empresa</label>
+                                    <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                                </div>
+                                <div class="floating-label">
+                                    <select
+                                        id="budget"
+                                        name="budget"
+                                        class="modern-input w-full px-4 py-3 bg-white bg-opacity-90 border border-white border-opacity-30 rounded-xl focus:outline-none transition-all duration-300 text-gray-800"
+                                    >
+                                        <option value="">Selecciona presupuesto</option>
+                                        <option value="<5k">Menos de 5.000€</option>
+                                        <option value="5k-10k">5.000€ - 10.000€</option>
+                                        <option value="10k-25k">10.000€ - 25.000€</option>
+                                        <option value="25k-50k">25.000€ - 50.000€</option>
+                                        <option value=">50k">Más de 50.000€</option>
+                                        <option value="discuss">Prefiero discutirlo</option>
+                                    </select>
+                                    <label for="budget" class="text-gray-600 font-medium">Presupuesto estimado</label>
+                                    <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                                </div>
+                            </div>
+
+                            <!-- Project Type and Timeline -->
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="floating-label">
+                                    <select
+                                        id="projectType"
+                                        name="projectType"
+                                        required
+                                        class="modern-input w-full px-4 py-3 bg-white bg-opacity-90 border border-white border-opacity-30 rounded-xl focus:outline-none transition-all duration-300 text-gray-800"
+                                    >
+                                        <option value="">Tipo de proyecto</option>
+                                        <option value="web-development">Desarrollo Web</option>
+                                        <option value="mobile-app">Aplicación Móvil</option>
+                                        <option value="ui-ux-design">Diseño UX/UI</option>
+                                        <option value="consulting">Consultoría Tech</option>
+                                        <option value="automation">Automatización</option>
+                                        <option value="ai-ml">IA/Machine Learning</option>
+                                        <option value="other">Otro</option>
+                                    </select>
+                                    <label for="projectType" class="text-gray-600 font-medium">Tipo de proyecto *</label>
+                                    <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                                </div>
+                                <div class="floating-label">
+                                    <select
+                                        id="timeline"
+                                        name="timeline"
+                                        class="modern-input w-full px-4 py-3 bg-white bg-opacity-90 border border-white border-opacity-30 rounded-xl focus:outline-none transition-all duration-300 text-gray-800"
+                                    >
+                                        <option value="">¿Cuándo empezamos?</option>
+                                        <option value="asap">Lo antes posible</option>
+                                        <option value="1-month">En el próximo mes</option>
+                                        <option value="2-3-months">En 2-3 meses</option>
+                                        <option value="6-months">En 6 meses</option>
+                                        <option value="planning">Solo estoy planificando</option>
+                                    </select>
+                                    <label for="timeline" class="text-gray-600 font-medium">Timeline del proyecto</label>
+                                    <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                                </div>
+                            </div>
+
+                            <!-- Project Description -->
+                            <div class="floating-label">
+                                <textarea
+                                    id="projectDescription"
+                                    name="projectDescription"
+                                    rows="5"
+                                    placeholder=" "
+                                    required
+                                    minlength="20"
+                                    maxlength="1000"
+                                    class="modern-input w-full px-4 py-3 bg-white bg-opacity-90 border border-white border-opacity-30 rounded-xl focus:outline-none transition-all duration-300 resize-none custom-scrollbar text-gray-800"
+                                ></textarea>
+                                <label for="projectDescription" class="text-gray-600 font-medium">Cuéntame más sobre tu proyecto *</label>
+                                <div class="flex justify-between mt-2">
+                                    <div class="error-message text-red-400 text-sm hidden"></div>
+                                    <div class="char-count text-white text-opacity-60 text-sm">0/1000</div>
+                                </div>
+                            </div>
+
+                            <!-- Preferences -->
+                            <div class="space-y-4">
+                                <h3 class="text-white font-semibold text-lg">¿Cómo prefieres que te contacte?</h3>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <label class="flex items-center space-x-3 cursor-pointer group">
+                                        <input type="radio" name="contactPreference" value="email" class="text-primary focus:ring-primary" checked>
+                                        <div class="flex items-center space-x-2">
+                                            <i class="fas fa-envelope text-white group-hover:text-blue-300 transition-colors"></i>
+                                            <span class="text-white group-hover:text-blue-300 transition-colors">Email</span>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center space-x-3 cursor-pointer group">
+                                        <input type="radio" name="contactPreference" value="phone" class="text-primary focus:ring-primary">
+                                        <div class="flex items-center space-x-2">
+                                            <i class="fas fa-phone text-white group-hover:text-blue-300 transition-colors"></i>
+                                            <span class="text-white group-hover:text-blue-300 transition-colors">Teléfono</span>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center space-x-3 cursor-pointer group">
+                                        <input type="radio" name="contactPreference" value="video" class="text-primary focus:ring-primary">
+                                        <div class="flex items-center space-x-2">
+                                            <i class="fas fa-video text-white group-hover:text-blue-300 transition-colors"></i>
+                                            <span class="text-white group-hover:text-blue-300 transition-colors">Videollamada</span>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center space-x-3 cursor-pointer group">
+                                        <input type="radio" name="contactPreference" value="meeting" class="text-primary focus:ring-primary">
+                                        <div class="flex items-center space-x-2">
+                                            <i class="fas fa-handshake text-white group-hover:text-blue-300 transition-colors"></i>
+                                            <span class="text-white group-hover:text-blue-300 transition-colors">Reunión presencial</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button
+                                type="submit"
+                                class="w-full btn-gradient text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50 transition-all duration-300 ripple flex items-center justify-center space-x-3"
+                            >
+                                <span id="btn-text">Enviar Proyecto</span>
+                                <i id="btn-icon" class="fas fa-rocket"></i>
+                                <div id="btn-spinner" class="hidden w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                            </button>
+
+                            <p class="text-center text-white text-opacity-70 text-sm">
+                                <i class="fas fa-shield-alt mr-1"></i>
+                                Tus datos están protegidos y no serán compartidos con terceros
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl p-8 max-w-md mx-4 text-center animate-scale-in">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-check text-3xl text-green-500"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">¡Mensaje enviado!</h3>
+            <p class="text-gray-600 mb-6">
+                Gracias por contactarme. Te responderé en las próximas horas.
+            </p>
+            <button
+                onclick="closeSuccessModal()"
+                class="bg-green-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors"
+            >
+                Perfecto
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2025 Ricardo Peñalver García. Todos los derechos reservados.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="mailto:ricardopenalver@icloud.com" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/ricardpenalver" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="https://github.com/ricardpenalver" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="modern-contact-form.js"></script>
+</body>
+</html>
