@@ -884,6 +884,7 @@ body {
     padding: 1rem 2rem;
     border-radius: 50px;
     font-weight: 600;
+    font-size: 1.125rem; /* 18px - equivalente a text-lg */
     cursor: pointer;
     transition: var(--transition);
     width: 100%;
