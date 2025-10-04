@@ -455,6 +455,7 @@ body {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 1.125rem; /* 18px - unificado con otros botones */
     transition: var(--transition);
     opacity: 0;
     animation: emergeFromBackground 2.5s ease-out 1s forwards;
@@ -1289,6 +1290,7 @@ body {
     text-decoration: none;
     border-radius: 8px;
     font-weight: 500;
+    font-size: 1.125rem; /* 18px - unificado con otros botones */
     transition: var(--transition);
     border: 2px solid transparent;
     min-width: 44px;
