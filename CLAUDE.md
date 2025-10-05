@@ -467,3 +467,4 @@ Después de cada push, verificar que ambas URLs funcionen correctamente:
 **Hosted en**: Vercel
 **Licencia**: MIT
 - acuerdate de donde lo dejamos. Mañana continuamos
+- nos quedamos en este punto. continuamos luego
