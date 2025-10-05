@@ -126,10 +126,26 @@ document.querySelectorAll('.project-card, .blog-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-10px)';
     });
-    
+
     card.addEventListener('mouseleave', function() {
         this.style.transform = 'translateY(0)';
     });
+});
+
+// Make blog cards clickable (navigate to post)
+document.querySelectorAll('.blog-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+        // Solo navegar si no se hizo clic en un enlace específico
+        if (e.target.tagName !== 'A') {
+            const link = this.querySelector('.blog-title a');
+            if (link) {
+                window.location.href = link.href;
+            }
+        }
+    });
+
+    // Agregar cursor pointer para indicar que es clickeable
+    card.style.cursor = 'pointer';
 });
 
 // Add click events to project and blog cards
@@ -140,12 +156,6 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-document.querySelectorAll('.blog-card').forEach(card => {
-    card.addEventListener('click', function() {
-        const title = this.querySelector('.blog-title').textContent;
-        alert(`Post: ${title}\n\nAquí podrías redirigir al artículo completo del blog.`);
-    });
-});
 
 // Typing effect for hero title
 function typeWriter(element, text, speed = 100) {
