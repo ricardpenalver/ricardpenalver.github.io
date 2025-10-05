@@ -399,7 +399,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 filename: "blog/personalizando-mi-programa-formativo.html",
                 excerpt: "Reflexiones sobre la educación personalizada y el uso de IA para crear programas formativos adaptados a las necesidades individuales...",
                 date: "2025-10-04",
-                category: "Educación e IA"
+                category: "Educación e IA",
+                image: "/assets/images/blog/personalizando-programa-formativo.jpg"
             },
             {
                 title: "Parar para Reconectar y Avanzar",
