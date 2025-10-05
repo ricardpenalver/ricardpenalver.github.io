@@ -460,11 +460,80 @@ Después de cada push, verificar que ambas URLs funcionen correctamente:
 
 **Estado**: Tarea 1 Fase 1 completada - Listo para Tarea 1 Fase 2
 
+## 📋 Progreso de Tareas Completadas - Actualización 5 Octubre 2024
+
+### ✅ COMPLETADO - Optimización Visual y UX (5 Octubre 2024)
+
+#### Tarea: Sistema de Imágenes Destacadas para Blog
+**Implementación de imágenes destacadas para posts del blog** (5 Octubre 2024)
+- ✅ Creado mapeo de 80+ categorías con imágenes temáticas de Unsplash
+- ✅ Implementada función `getImageForArticle()` con lógica inteligente:
+  - Prioridad 1: Imagen específica del post
+  - Prioridad 2: Imagen por categoría
+  - Prioridad 3: Icono genérico de fallback
+- ✅ Configuradas imágenes optimizadas (600x300, auto-format)
+- ✅ Efectos hover y responsive design mantenidos
+- ✅ Sistema compatible con todas las categorías existentes
+
+**Resultado**: Todos los posts del blog ahora muestran miniaturas atractivas que mejoran significativamente la experiencia visual
+
+#### Tarea: Actualización de Footer
+**Actualización del footer con mención a Claude Code** (5 Octubre 2024)
+- ✅ Actualizado texto en 8 archivos HTML:
+  - `index.html` - Página principal
+  - Todas las páginas de habilidades (`ensenar.html`, `gestionar.html`, etc.)
+  - `pages/competencias.html`
+- ✅ Nuevo texto: "Web diseñada, programada, alojada y mantenida por Ricardo Peñalver García gracias a Claude Code"
+
+**Resultado**: Footer actualizado reconociendo el uso de Claude Code en el desarrollo
+
+#### Tarea: Reorganización y Mejoras Visuales de la Home
+**Optimización de la página principal** (5 Octubre 2024)
+- ✅ **Reordenación**: Sección Blog movida antes de Proyectos
+- ✅ **Imágenes Blog**: Implementadas miniaturas temáticas en sección blog de home
+  - Posts ordenados por fecha con formato "Mes Año"
+  - Imágenes de alta calidad desde Unsplash
+  - Hover effects y transiciones suaves
+- ✅ **Imágenes Proyectos**: Implementadas miniaturas en sección proyectos de home
+  - Imágenes temáticas para cada proyecto
+  - Clases CSS `.project-card-image` configuradas
+  - Efectos hover consistentes
+- ✅ **CSS**: Agregados estilos para `.project-card-image` con hover effects
+
+**Resultado**: Home page significativamente más visual y atractiva con mejor jerarquía de contenido
+
+### 📊 Métricas de Progreso Post-Optimización Visual
+
+**Estado actual después de mejoras del 5 Octubre 2024:**
+- **Páginas profesionales accesibles**: 100% (7/7) ✅
+- **Contenido profesional crítico**: 100% accesible ✅
+- **Navegación consistente**: 100% implementada ✅
+- **Posts de blog accesibles**: 5.8% (16/277) ✅
+- **Sistema de imágenes**: 100% implementado ✅
+- **UX/UI**: Significativamente mejorada ✅
+
+**Mejoras visuales implementadas:**
+- **Miniaturas blog**: 100% de posts con imágenes ✅
+- **Miniaturas proyectos**: 100% implementado ✅
+- **Orden de secciones**: Optimizado (Blog antes de Proyectos) ✅
+- **Fechas formateadas**: Mes y año en formato legible ✅
+- **Hover effects**: Consistentes en toda la interfaz ✅
+
+### 🔄 Protocolo de Despliegue Ejecutado
+
+**Commits realizados el 5 Octubre 2024:**
+1. **Commit**: `Implementar sistema de imágenes destacadas para posts del blog`
+2. **Commit**: `Actualizar footer con mención a Claude Code`
+3. **Commit**: `Reorganizar home: blog antes de proyectos + imágenes`
+
+**URLs verificadas:**
+- ✅ [Vercel](https://ricardpenalver.vercel.app) - Funcionando correctamente
+- ✅ [GitHub Pages](https://ricardpenalver.github.io) - Sincronizado
+
 ---
 
-**Última actualización**: 3 Octubre 2024
-**Desarrollado con**: Cursor + Claude
-**Hosted en**: Vercel
+**Última actualización**: 5 Octubre 2024
+**Desarrollado con**: Cursor + Claude Code
+**Hosted en**: Vercel + GitHub Pages
 **Licencia**: MIT
-- acuerdate de donde lo dejamos. Mañana continuamos
-- nos quedamos en este punto. continuamos luego
+- Documenta todos los cambios en el fichero claude.md
