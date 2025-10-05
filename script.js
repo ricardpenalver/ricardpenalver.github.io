@@ -386,3 +386,87 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Home blog section functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const homeBlogGrid = document.getElementById('home-blog-grid');
+
+    if (homeBlogGrid) {
+        // Featured blog articles for home page (latest 3)
+        const featuredArticles = [
+            {
+                title: "Personalizando(me) mi programa formativo",
+                filename: "blog/personalizando-mi-programa-formativo.html",
+                excerpt: "Reflexiones sobre la educación personalizada y el uso de IA para crear programas formativos adaptados a las necesidades individuales...",
+                date: "2025-10-04",
+                category: "Educación e IA"
+            },
+            {
+                title: "Parar para Reconectar y Avanzar",
+                filename: "blog/parar-para-reconectar-y-avanzar.html",
+                excerpt: "Reflexiones sobre la importancia de hacer pausas en nuestra vida profesional para reconectar con nuestros objetivos...",
+                date: "2025-01-15",
+                category: "Productividad"
+            },
+            {
+                title: "Agenda de Conciertos de un Festival con IA",
+                filename: "blog/agenda-de-conciertos-de-un-festival-con-ia.html",
+                excerpt: "Cómo la inteligencia artificial puede ayudarnos a crear agendas personalizadas para festivales de música...",
+                date: "2025-01-10",
+                category: "Tecnología"
+            }
+        ];
+
+        // Category image mapping (same as blog-data.js)
+        const categoryImages = {
+            "Educación e IA": "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=600&h=300&fit=crop&auto=format",
+            "Productividad": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=300&fit=crop&auto=format",
+            "Tecnología": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=300&fit=crop&auto=format",
+            "Emprendimiento": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=300&fit=crop&auto=format",
+            "Estrategia": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop&auto=format",
+            "Desarrollo Profesional": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=300&fit=crop&auto=format"
+        };
+
+        function formatDateHome(dateString) {
+            const date = new Date(dateString);
+            const options = { year: 'numeric', month: 'long' };
+            return date.toLocaleDateString('es-ES', options);
+        }
+
+        function getImageForArticleHome(article) {
+            // Si el artículo ya tiene imagen específica, usarla
+            if (article.image) {
+                return `<img src="${article.image}" alt="${article.title}" class="blog-card-image">`;
+            }
+
+            // Si no, usar imagen por categoría
+            const categoryImage = categoryImages[article.category];
+            if (categoryImage) {
+                return `<img src="${categoryImage}" alt="${article.title}" class="blog-card-image">`;
+            }
+
+            // Fallback: icono genérico
+            return `<i class="fas fa-blog"></i>`;
+        }
+
+        function createHomeBlogCard(article) {
+            const imageContent = getImageForArticleHome(article);
+
+            return `
+                <a href="${article.filename}" class="blog-card">
+                    <div class="blog-image">
+                        ${imageContent}
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">${article.title}</h3>
+                        <p class="blog-excerpt">${article.excerpt}</p>
+                        <span class="blog-date">${formatDateHome(article.date)}</span>
+                    </div>
+                </a>
+            `;
+        }
+
+        // Render featured articles on home page
+        homeBlogGrid.innerHTML = featuredArticles.map(createHomeBlogCard).join('');
+    }
+});
