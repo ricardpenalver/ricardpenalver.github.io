@@ -901,10 +901,122 @@ function formatDate(dateString) {
     return date.toLocaleDateString('es-ES', options);
 }
 
+// Category image mapping
+const categoryImages = {
+    "Educación e IA": "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=600&h=300&fit=crop&auto=format",
+    "Productividad": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=300&fit=crop&auto=format",
+    "Tecnología": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=300&fit=crop&auto=format",
+    "Emprendimiento": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=300&fit=crop&auto=format",
+    "Estrategia": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop&auto=format",
+    "Desarrollo Profesional": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=300&fit=crop&auto=format",
+    "Marketing": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop&auto=format",
+    "Desarrollo Personal": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=600&h=300&fit=crop&auto=format",
+    "Bienestar Digital": "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=600&h=300&fit=crop&auto=format",
+    "Portfolio": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=300&fit=crop&auto=format",
+    "Automatización": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=300&fit=crop&auto=format",
+    "Calidad": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=300&fit=crop&auto=format",
+    "Reflexión Personal": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=300&fit=crop&auto=format",
+    "Liderazgo": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=300&fit=crop&auto=format",
+    "Inteligencia Artificial": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=300&fit=crop&auto=format",
+    "Innovación": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=300&fit=crop&auto=format",
+    "Eventos": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=300&fit=crop&auto=format",
+    "Inspiración": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=300&fit=crop&auto=format",
+    "Gestión de Equipos": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=300&fit=crop&auto=format",
+    "Proyectos Culturales": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=300&fit=crop&auto=format",
+    "Marketing de Contenidos": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600&h=300&fit=crop&auto=format",
+    "Marca Personal": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop&auto=format",
+    "Comunicación": "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&h=300&fit=crop&auto=format",
+    "Sostenibilidad": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=300&fit=crop&auto=format",
+    "Filosofía": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=300&fit=crop&auto=format",
+    "Cultura": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop&auto=format",
+    "Reflexión": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=300&fit=crop&auto=format",
+    "Marketing Digital": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600&h=300&fit=crop&auto=format",
+    "Desarrollo": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop&auto=format",
+    "UX/UI Design": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=300&fit=crop&auto=format",
+    "Análisis Visual": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop&auto=format",
+    "Perfil Profesional": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop&auto=format",
+    "Filosofía Tecnológica": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=300&fit=crop&auto=format",
+    "Desarrollo Directivo": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=300&fit=crop&auto=format",
+    "Formación Profesional": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=300&fit=crop&auto=format",
+    "Competencias Emprendedoras": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=300&fit=crop&auto=format",
+    "Legislación Empresarial": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=300&fit=crop&auto=format",
+    "Gobierno Digital": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=300&fit=crop&auto=format",
+    "Innovación Pública": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&h=300&fit=crop&auto=format",
+    "Change Management": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=300&fit=crop&auto=format",
+    "Productividad Avanzada": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=300&fit=crop&auto=format",
+    "Liderazgo Digital": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=300&fit=crop&auto=format",
+    "Sostenibilidad Corporativa": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=300&fit=crop&auto=format",
+    "Business Intelligence": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop&auto=format",
+    "Agilidad Pública": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=300&fit=crop&auto=format",
+    "Seguridad Digital": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=300&fit=crop&auto=format",
+    "Arquitectura Gubernamental": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=300&fit=crop&auto=format",
+    "Democracia Digital": "https://images.unsplash.com/photo-1541872705-1f73c6400ec9?w=600&h=300&fit=crop&auto=format",
+    "Project Management Digital": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=300&fit=crop&auto=format",
+    "IA Gubernamental": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=300&fit=crop&auto=format",
+    "Evaluación Pública": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop&auto=format",
+    "Service Design Público": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=300&fit=crop&auto=format",
+    "Blockchain Gubernamental": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=300&fit=crop&auto=format",
+    "Talento Público": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=300&fit=crop&auto=format",
+    "Transparencia Digital": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=300&fit=crop&auto=format",
+    "Cloud Público": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=300&fit=crop&auto=format",
+    "Comunicación Institucional": "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&h=300&fit=crop&auto=format",
+    "Innovación Abierta": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&h=300&fit=crop&auto=format",
+    "Ética Digital": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=300&fit=crop&auto=format",
+    "Smart Cities": "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=300&fit=crop&auto=format",
+    "Formación Digital Pública": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=300&fit=crop&auto=format",
+    "Participación Presupuestaria": "https://images.unsplash.com/photo-1541872705-1f73c6400ec9?w=600&h=300&fit=crop&auto=format",
+    "Policy Analytics": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop&auto=format",
+    "RPA Público": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=300&fit=crop&auto=format",
+    "Identidad Digital": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=300&fit=crop&auto=format",
+    "e-Procurement": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=300&fit=crop&auto=format",
+    "Madurez Digital": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop&auto=format",
+    "Government as a Platform": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=300&fit=crop&auto=format",
+    "Resiliencia Digital": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=300&fit=crop&auto=format",
+    "Machine Learning Público": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=300&fit=crop&auto=format",
+    "Arquitectura de Software": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop&auto=format",
+    "UX Gubernamental": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=300&fit=crop&auto=format",
+    "Cultura Digital": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=300&fit=crop&auto=format",
+    "IoT Urbano": "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=300&fit=crop&auto=format",
+    "Gamificación Pública": "https://images.unsplash.com/photo-1556438064-2d7646166914?w=600&h=300&fit=crop&auto=format",
+    "Realidad Extendida": "https://images.unsplash.com/photo-1592478411213-6153e4ebc696?w=600&h=300&fit=crop&auto=format",
+    "Conectividad 5G": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=300&fit=crop&auto=format",
+    "Computación Cuántica": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=300&fit=crop&auto=format",
+    "Edge Computing": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=300&fit=crop&auto=format",
+    "Robótica Pública": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=300&fit=crop&auto=format",
+    "IA Conversacional": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=300&fit=crop&auto=format",
+    "DevOps Público": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop&auto=format",
+    "Serverless Público": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=300&fit=crop&auto=format",
+    "Observabilidad": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop&auto=format",
+    "Modernización Legacy": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop&auto=format",
+    "Quality Assurance": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=300&fit=crop&auto=format",
+    "Documentación Técnica": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600&h=300&fit=crop&auto=format",
+    "Prototipado": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&h=300&fit=crop&auto=format",
+    "Arquitectura de Datos": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop&auto=format",
+    "Gestión de Incidentes": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=300&fit=crop&auto=format",
+    "Lean Government": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=300&fit=crop&auto=format",
+    "Compliance Digital": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=300&fit=crop&auto=format",
+    "Integración de Sistemas": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop&auto=format",
+    "Optimización Performance": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=300&fit=crop&auto=format"
+};
+
+function getImageForArticle(article) {
+    // Si el artículo ya tiene imagen específica, usarla
+    if (article.image) {
+        return `<img src="${article.image}" alt="${article.title}" class="blog-card-image">`;
+    }
+
+    // Si no, usar imagen por categoría
+    const categoryImage = categoryImages[article.category];
+    if (categoryImage) {
+        return `<img src="${categoryImage}" alt="${article.title}" class="blog-card-image">`;
+    }
+
+    // Fallback: icono genérico
+    return `<i class="fas fa-blog"></i>`;
+}
+
 function createBlogCard(article) {
-    const imageContent = article.image
-        ? `<img src="${article.image}" alt="${article.title}" class="blog-card-image">`
-        : `<i class="fas fa-blog"></i>`;
+    const imageContent = getImageForArticle(article);
 
     return `
         <article class="blog-card">
