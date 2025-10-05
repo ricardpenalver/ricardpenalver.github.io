@@ -148,13 +148,6 @@ document.querySelectorAll('.blog-card').forEach(card => {
     card.style.cursor = 'pointer';
 });
 
-// Add click events to project and blog cards
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('click', function() {
-        const title = this.querySelector('.project-title').textContent;
-        alert(`Proyecto: ${title}\n\nAquí podrías redirigir a una página detallada del proyecto o abrir un modal con más información.`);
-    });
-});
 
 
 // Typing effect for hero title
