@@ -1,7 +1,21 @@
 {
   "version": 2,
-  "buildCommand": "echo 'No build needed for static site'",
-  "outputDirectory": ".",
-  "framework": null,
-  "installCommand": "echo 'No dependencies to install'"
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "functions": {},
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
 }
