@@ -1,8 +1,8 @@
-// Simple Contact Form Fallback
-// Basic functionality that always works
+// Web3Forms Contact Form - Simple & Functional
+// This version prioritizes functionality over complexity
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Cargando formulario simple...');
+    console.log('🚀 Inicializando formulario Web3Forms...');
 
     const form = document.getElementById('modernContactForm');
     const submitBtn = form?.querySelector('button[type="submit"]');
@@ -11,65 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const successModal = document.getElementById('successModal');
 
     if (!form) {
-        console.error('Formulario no encontrado');
+        console.error('❌ Formulario no encontrado');
         return;
     }
 
-    console.log('Formulario encontrado, configurando eventos...');
+    console.log('✅ Formulario encontrado, configurando...');
 
-    // Custom validation function
-    function validateForm() {
-        let isValid = true;
-        const requiredFields = form.querySelectorAll('[required]');
-
-        requiredFields.forEach(field => {
-            const errorDiv = field.parentNode.querySelector('.error-message');
-
-            if (!field.value.trim()) {
-                isValid = false;
-                field.style.borderColor = '#ef4444';
-                if (errorDiv) {
-                    errorDiv.textContent = 'Este campo es obligatorio';
-                    errorDiv.classList.remove('hidden');
-                }
-            } else {
-                field.style.borderColor = '#10b981';
-                if (errorDiv) {
-                    errorDiv.textContent = '';
-                    errorDiv.classList.add('hidden');
-                }
-            }
-        });
-
-        // Validate email format
-        const emailField = form.querySelector('#email');
-        if (emailField && emailField.value) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            const emailErrorDiv = emailField.parentNode.querySelector('.error-message');
-
-            if (!emailRegex.test(emailField.value)) {
-                isValid = false;
-                emailField.style.borderColor = '#ef4444';
-                if (emailErrorDiv) {
-                    emailErrorDiv.textContent = 'Por favor, introduce un email válido';
-                    emailErrorDiv.classList.remove('hidden');
-                }
-            }
-        }
-
-        return isValid;
-    }
-
-    // Web3Forms submission
+    // Simple form submission handler
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        console.log('Validando y enviando formulario a Web3Forms...');
-
-        // Custom validation first
-        if (!validateForm()) {
-            console.log('Formulario no válido, cancelando envío');
-            return;
-        }
+        console.log('📤 Enviando formulario...');
 
         // Show loading state
         if (submitBtn) {
@@ -79,26 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         try {
-            // Generate reCAPTCHA token
-            const recaptchaResponse = await new Promise((resolve, reject) => {
-                if (typeof grecaptcha !== 'undefined') {
-                    grecaptcha.ready(() => {
-                        grecaptcha.execute('6LcBcIUoAAAAAO9u3rZNJo7TGCjrHwJwI6o8S7qL', {action: 'submit'})
-                            .then(resolve)
-                            .catch(reject);
-                    });
-                } else {
-                    // If reCAPTCHA is not available, continue without it
-                    resolve('');
-                }
-            });
-
-            // Get form data
+            // Create FormData from form
             const formData = new FormData(form);
 
-            // Add reCAPTCHA token if available
-            if (recaptchaResponse) {
-                formData.set('g-recaptcha-response', recaptchaResponse);
+            // Log form data for debugging
+            console.log('📋 Datos del formulario:');
+            for (let [key, value] of formData.entries()) {
+                console.log(`${key}: ${value}`);
             }
 
             // Send to Web3Forms
@@ -107,45 +45,51 @@ document.addEventListener('DOMContentLoaded', function() {
                 body: formData
             });
 
+            console.log('📡 Respuesta del servidor:', response.status);
+
+            if (!response.ok) {
+                throw new Error(`Error HTTP: ${response.status}`);
+            }
+
             const result = await response.json();
+            console.log('📄 Resultado:', result);
 
             if (result.success) {
-                console.log('Formulario enviado exitosamente a Web3Forms');
+                console.log('✅ ¡Formulario enviado exitosamente!');
 
                 // Reset form
                 form.reset();
-
-                // Reset field styles
-                const allFields = form.querySelectorAll('input, textarea, select');
-                allFields.forEach(field => {
-                    field.style.borderColor = '';
-                });
-
-                // Hide all error messages
-                const errorMessages = form.querySelectorAll('.error-message');
-                errorMessages.forEach(error => {
-                    error.classList.add('hidden');
-                });
 
                 // Show success modal
                 if (successModal) {
                     successModal.classList.remove('hidden');
                     successModal.classList.add('flex');
                 }
+
+                console.log('🎉 Modal de éxito mostrado');
             } else {
-                throw new Error(result.message || 'Error al enviar el formulario');
+                throw new Error(result.message || 'Error desconocido del servidor');
             }
+
         } catch (error) {
-            console.error('Error al enviar formulario:', error);
+            console.error('❌ Error al enviar formulario:', error);
 
-            // Better error modal
-            const errorMsg = error.message.includes('Failed to fetch')
-                ? 'Error de conexión. Por favor, verifica tu conexión a internet e inténtalo de nuevo.'
-                : 'Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contacta directamente por email: ricardopenalver@icloud.com';
+            let errorMessage = 'Hubo un error al enviar el formulario. ';
 
-            alert(errorMsg);
+            if (error.message.includes('Failed to fetch')) {
+                errorMessage += 'Por favor, verifica tu conexión a internet e inténtalo de nuevo.';
+            } else if (error.message.includes('HTTP: 429')) {
+                errorMessage += 'Has enviado demasiados mensajes. Espera unos minutos e inténtalo de nuevo.';
+            } else if (error.message.includes('HTTP: 422')) {
+                errorMessage += 'Por favor, verifica que todos los campos estén completos correctamente.';
+            } else {
+                errorMessage += `Contacta directamente por email: ricardopenalver@icloud.com\n\nError técnico: ${error.message}`;
+            }
+
+            alert(errorMessage);
+
         } finally {
-            // Hide loading state
+            // Always restore button state
             if (submitBtn) {
                 submitBtn.disabled = false;
                 if (btnText) btnText.textContent = 'Enviar Proyecto';
@@ -154,34 +98,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Simple validation on required fields
-    const requiredFields = form.querySelectorAll('[required]');
-    requiredFields.forEach(field => {
-        field.addEventListener('blur', function() {
-            if (!this.value.trim()) {
-                this.style.borderColor = '#ef4444';
-            } else {
-                this.style.borderColor = '#10b981';
-            }
-        });
-
-        field.addEventListener('input', function() {
-            if (this.value.trim()) {
-                this.style.borderColor = '#10b981';
-            } else {
-                this.style.borderColor = '#ef4444';
-            }
-        });
-    });
-
-    console.log('Eventos configurados correctamente');
+    console.log('✅ Formulario configurado correctamente');
 });
 
-// Global function for closing modal
+// Global function for closing success modal
 window.closeSuccessModal = function() {
     const successModal = document.getElementById('successModal');
     if (successModal) {
         successModal.classList.add('hidden');
         successModal.classList.remove('flex');
+        console.log('🔒 Modal cerrado');
     }
 };
+
+console.log('📝 Script de formulario cargado');
