@@ -594,6 +594,124 @@
     </footer>
 
     <script src="../script.js"></script>
-    <script src="contact-form-simple.js"></script>
+    <script>
+        // Web3Forms Contact Form - Inline version for guaranteed loading
+        console.log('🔥 FORMULARIO CARGANDO - INLINE VERSION');
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 DOM CARGADO - Inicializando formulario Web3Forms...');
+
+            const form = document.getElementById('modernContactForm');
+            const submitBtn = form?.querySelector('button[type="submit"]');
+            const btnText = document.getElementById('btn-text');
+            const btnSpinner = document.getElementById('btn-spinner');
+            const successModal = document.getElementById('successModal');
+
+            if (!form) {
+                console.error('❌ FORMULARIO NO ENCONTRADO');
+                return;
+            }
+
+            console.log('✅ FORMULARIO ENCONTRADO - Configurando eventos...');
+
+            // Form submission handler
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                console.log('📤 ENVIANDO FORMULARIO...');
+
+                // Show loading state
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    if (btnText) btnText.textContent = 'Enviando...';
+                    if (btnSpinner) btnSpinner.classList.remove('hidden');
+                }
+
+                try {
+                    // Create FormData
+                    const formData = new FormData(form);
+
+                    // Log all form data
+                    console.log('📋 DATOS DEL FORMULARIO:');
+                    for (let [key, value] of formData.entries()) {
+                        console.log(`  ${key}: ${value}`);
+                    }
+
+                    // Send to Web3Forms
+                    console.log('🌐 ENVIANDO A WEB3FORMS...');
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    console.log('📡 RESPUESTA RECIBIDA:', response.status, response.statusText);
+
+                    if (!response.ok) {
+                        throw new Error(`Error HTTP: ${response.status}`);
+                    }
+
+                    const result = await response.json();
+                    console.log('📄 RESULTADO COMPLETO:', result);
+
+                    if (result.success) {
+                        console.log('✅ ¡ÉXITO! FORMULARIO ENVIADO CORRECTAMENTE');
+
+                        // Reset form
+                        form.reset();
+
+                        // Show success modal
+                        if (successModal) {
+                            successModal.classList.remove('hidden');
+                            successModal.classList.add('flex');
+                            console.log('🎉 MODAL DE ÉXITO MOSTRADO');
+                        }
+                    } else {
+                        throw new Error(result.message || 'Error del servidor');
+                    }
+
+                } catch (error) {
+                    console.error('❌ ERROR AL ENVIAR:', error);
+
+                    let errorMessage = 'Error al enviar el formulario:\n\n';
+
+                    if (error.message.includes('Failed to fetch')) {
+                        errorMessage += '🌐 Error de conexión. Verifica tu internet.';
+                    } else if (error.message.includes('HTTP: 429')) {
+                        errorMessage += '⏰ Demasiados envíos. Espera unos minutos.';
+                    } else if (error.message.includes('HTTP: 422')) {
+                        errorMessage += '📝 Datos incompletos o inválidos.';
+                    } else if (error.message.includes('HTTP: 403')) {
+                        errorMessage += '🔑 Access Key inválida.';
+                    } else {
+                        errorMessage += `💻 Error técnico: ${error.message}`;
+                    }
+
+                    errorMessage += '\n\nContacta directamente: ricardopenalver@icloud.com';
+                    alert(errorMessage);
+
+                } finally {
+                    // Restore button
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        if (btnText) btnText.textContent = 'Enviar Proyecto';
+                        if (btnSpinner) btnSpinner.classList.add('hidden');
+                    }
+                }
+            });
+
+            console.log('✅ FORMULARIO CONFIGURADO COMPLETAMENTE');
+        });
+
+        // Close modal function
+        window.closeSuccessModal = function() {
+            const successModal = document.getElementById('successModal');
+            if (successModal) {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                console.log('🔒 MODAL CERRADO');
+            }
+        };
+
+        console.log('📝 SCRIPT INLINE CARGADO COMPLETAMENTE');
+    </script>
 </body>
 </html>
