@@ -305,7 +305,15 @@
                             </p>
                         </div>
 
-                        <form id="modernContactForm" class="space-y-6" novalidate>
+                        <form id="modernContactForm" class="space-y-6" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                            <!-- Web3Forms Access Key - Replace YOUR_ACCESS_KEY with your actual key -->
+                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+                            <!-- Optional: Redirect after submission -->
+                            <input type="hidden" name="redirect" value="false">
+                            <!-- Optional: Subject line for email -->
+                            <input type="hidden" name="subject" value="Nuevo contacto desde ricardpenalver.vercel.app">
+                            <!-- Anti-spam honeypot field -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                             <!-- Progress Bar -->
                             <div id="form-progress" class="w-full bg-white bg-opacity-20 rounded-full h-1 mb-6">
                                 <div class="progress-bar h-1 rounded-full" style="width: 0%;"></div>

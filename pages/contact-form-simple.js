@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('Formulario encontrado, configurando eventos...');
 
-    // Simple form submission
+    // Web3Forms submission
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        console.log('Formulario enviado');
+        console.log('Enviando formulario a Web3Forms...');
 
         // Show loading state
         if (submitBtn) {
@@ -29,23 +29,43 @@ document.addEventListener('DOMContentLoaded', function() {
             if (btnSpinner) btnSpinner.classList.remove('hidden');
         }
 
-        // Simulate submission
-        setTimeout(() => {
+        try {
+            // Get form data
+            const formData = new FormData(form);
+
+            // Send to Web3Forms
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                console.log('Formulario enviado exitosamente a Web3Forms');
+
+                // Reset form
+                form.reset();
+
+                // Show success modal
+                if (successModal) {
+                    successModal.classList.remove('hidden');
+                    successModal.classList.add('flex');
+                }
+            } else {
+                throw new Error(result.message || 'Error al enviar el formulario');
+            }
+        } catch (error) {
+            console.error('Error al enviar formulario:', error);
+            alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contacta directamente por email.');
+        } finally {
             // Hide loading state
             if (submitBtn) {
                 submitBtn.disabled = false;
                 if (btnText) btnText.textContent = 'Enviar Proyecto';
                 if (btnSpinner) btnSpinner.classList.add('hidden');
             }
-
-            // Show success modal
-            if (successModal) {
-                successModal.classList.remove('hidden');
-                successModal.classList.add('flex');
-            }
-
-            console.log('Formulario enviado exitosamente');
-        }, 2000);
+        }
     });
 
     // Simple validation on required fields
