@@ -17,10 +17,59 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('Formulario encontrado, configurando eventos...');
 
+    // Custom validation function
+    function validateForm() {
+        let isValid = true;
+        const requiredFields = form.querySelectorAll('[required]');
+
+        requiredFields.forEach(field => {
+            const errorDiv = field.parentNode.querySelector('.error-message');
+
+            if (!field.value.trim()) {
+                isValid = false;
+                field.style.borderColor = '#ef4444';
+                if (errorDiv) {
+                    errorDiv.textContent = 'Este campo es obligatorio';
+                    errorDiv.classList.remove('hidden');
+                }
+            } else {
+                field.style.borderColor = '#10b981';
+                if (errorDiv) {
+                    errorDiv.textContent = '';
+                    errorDiv.classList.add('hidden');
+                }
+            }
+        });
+
+        // Validate email format
+        const emailField = form.querySelector('#email');
+        if (emailField && emailField.value) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const emailErrorDiv = emailField.parentNode.querySelector('.error-message');
+
+            if (!emailRegex.test(emailField.value)) {
+                isValid = false;
+                emailField.style.borderColor = '#ef4444';
+                if (emailErrorDiv) {
+                    emailErrorDiv.textContent = 'Por favor, introduce un email válido';
+                    emailErrorDiv.classList.remove('hidden');
+                }
+            }
+        }
+
+        return isValid;
+    }
+
     // Web3Forms submission
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        console.log('Enviando formulario a Web3Forms...');
+        console.log('Validando y enviando formulario a Web3Forms...');
+
+        // Custom validation first
+        if (!validateForm()) {
+            console.log('Formulario no válido, cancelando envío');
+            return;
+        }
 
         // Show loading state
         if (submitBtn) {
@@ -30,8 +79,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         try {
+            // Generate reCAPTCHA token
+            const recaptchaResponse = await new Promise((resolve, reject) => {
+                if (typeof grecaptcha !== 'undefined') {
+                    grecaptcha.ready(() => {
+                        grecaptcha.execute('6LcBcIUoAAAAAO9u3rZNJo7TGCjrHwJwI6o8S7qL', {action: 'submit'})
+                            .then(resolve)
+                            .catch(reject);
+                    });
+                } else {
+                    // If reCAPTCHA is not available, continue without it
+                    resolve('');
+                }
+            });
+
             // Get form data
             const formData = new FormData(form);
+
+            // Add reCAPTCHA token if available
+            if (recaptchaResponse) {
+                formData.set('g-recaptcha-response', recaptchaResponse);
+            }
 
             // Send to Web3Forms
             const response = await fetch('https://api.web3forms.com/submit', {
@@ -47,6 +115,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Reset form
                 form.reset();
 
+                // Reset field styles
+                const allFields = form.querySelectorAll('input, textarea, select');
+                allFields.forEach(field => {
+                    field.style.borderColor = '';
+                });
+
+                // Hide all error messages
+                const errorMessages = form.querySelectorAll('.error-message');
+                errorMessages.forEach(error => {
+                    error.classList.add('hidden');
+                });
+
                 // Show success modal
                 if (successModal) {
                     successModal.classList.remove('hidden');
@@ -57,7 +137,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } catch (error) {
             console.error('Error al enviar formulario:', error);
-            alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contacta directamente por email.');
+
+            // Better error modal
+            const errorMsg = error.message.includes('Failed to fetch')
+                ? 'Error de conexión. Por favor, verifica tu conexión a internet e inténtalo de nuevo.'
+                : 'Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contacta directamente por email: ricardopenalver@icloud.com';
+
+            alert(errorMsg);
         } finally {
             // Hide loading state
             if (submitBtn) {
