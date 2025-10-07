@@ -141,18 +141,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
-        /* Progress bar */
-        .progress-bar {
-            height: 4px;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
-            border-radius: 2px;
-            animation: progress 2s ease-in-out infinite;
-        }
-
-        @keyframes progress {
-            0% { width: 0%; }
-            100% { width: 100%; }
-        }
 
         /* Ripple effect */
         .ripple {
@@ -308,10 +296,6 @@
                             <input type="hidden" name="redirect" value="false">
                             <!-- Anti-spam honeypot -->
                             <input type="text" name="_honey" style="display: none;">
-                            <!-- Progress Bar -->
-                            <div id="form-progress" class="w-full bg-white bg-opacity-20 rounded-full h-1 mb-6">
-                                <div class="progress-bar h-1 rounded-full" style="width: 0%;"></div>
-                            </div>
 
                             <!-- Personal Information -->
                             <div class="grid md:grid-cols-2 gap-6">
