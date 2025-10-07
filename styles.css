@@ -1003,14 +1003,15 @@ body {
 }
 
 .footer-link {
-    color: var(--text-light);
+    color: #5dade2;
     text-decoration: underline;
+    font-weight: 600;
     transition: var(--transition);
 }
 
 .footer-link:hover {
-    opacity: 1;
-    color: var(--accent-color);
+    color: #85c1e9;
+    text-decoration: none;
 }
 
 /* Animations */
