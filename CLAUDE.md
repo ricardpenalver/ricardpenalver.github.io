@@ -799,6 +799,86 @@ Los cambios se desplegarán automáticamente en Vercel tras el commit y push a G
 **Tipo de cambio**: Configuración y optimización de infraestructura  
 **Impacto**: Alto - Mejora significativa en velocidad y confiabilidad del deploy
 
+## 🔧 Solución de Problema de Z-Index en Página de Contacto - 7 Octubre 2025
+
+### ✅ COMPLETADO - Resolución de Superposición de Navbar
+
+#### Problema Identificado
+**Título "¿Hablamos?" se posicionaba detrás del menú de navegación** 🔴
+- Problema persistía tanto sin scroll como al hacer scroll
+- Múltiples intentos de ajuste de z-index no resolvían el issue
+- Página de contacto visualmente sobrecargada
+
+#### Diagnóstico Profundo
+**Análisis de z-index en todo el proyecto:**
+- Navbar: `z-index: 1000` ✅ Correcto
+- Sección contacto: `z-index: 1` ✅ Correcto
+- Elementos flotantes: Sin z-index conflictivo ✅
+
+**Problema real identificado:**
+- **Layout de Flexbox**: `flex items-center` centraba contenido ignorando `padding-top`
+- **Elementos flotantes**: `top-20` (80px) interferían con navbar
+- **Alineación vertical**: Contenido se centraba en viewport completo, no respetando espaciado
+
+#### Solución Implementada por Cursor
+
+**Cambios técnicos específicos:**
+```html
+<!-- ANTES -->
+<section class="... flex items-center justify-center ...">
+  <div class="... relative" style="padding-top: 120px;">
+
+<!-- DESPUÉS -->
+<section class="... flex items-start justify-center ...">
+  <div class="... relative w-full" style="padding-top: 140px;">
+```
+
+**1. Cambio crítico de Flexbox:** ⚡
+- `items-center` → `items-start`
+- Efecto: Respeta el padding-top en lugar de centrar verticalmente
+
+**2. Optimización del contenedor:** 🔧
+- Agregado `w-full` para ocupar ancho completo
+- Incremento de `padding-top: 120px → 140px`
+
+**3. Elementos flotantes optimizados:** 🎯
+- `z-index: -1` en contenedor de elementos flotantes
+- Reposicionamiento: `top-20 → top-32` y `top-40 → top-48`
+
+#### Lecciones Técnicas Aprendidas
+
+**1. Flexbox + Padding Conflict:**
+- `items-center` ignora padding interno al centrar
+- `items-start` + `padding-top` es más predecible
+- Solución preferida para headers con navbar fijo
+
+**2. Diagnóstico de Z-Index:**
+- El problema no siempre es z-index
+- Layout y posicionamiento pueden crear superposiciones aparentes
+- Revisar flexbox alignment antes que z-index
+
+**3. Enfoque Sistemático:**
+- Cursor identificó la causa raíz en lugar de síntomas
+- Cambio mínimo con máximo impacto
+- Solución elegante vs múltiples parches
+
+### 📊 Resultado
+
+**Estado antes:**
+- ❌ Título detrás del navbar
+- ❌ Layout impredecible
+- ❌ Elementos flotantes conflictivos
+
+**Estado después:**
+- ✅ Título siempre visible correctamente
+- ✅ Layout predecible y consistente
+- ✅ Separación adecuada navbar-contenido
+- ✅ Elementos flotantes no interfieren
+
+**Método de solución:** Cursor IDE + análisis directo de layout
+**Tiempo de resolución:** <5 minutos (vs múltiples intentos previos)
+**Archivos modificados:** 1 (`pages/contacto.html`)
+
 ---
 
 **Última actualización**: 7 Octubre 2025
