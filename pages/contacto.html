@@ -14,14 +14,14 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#6366f1',
-                        'primary-dark': '#4f46e5',
-                        'secondary': '#64748b',
-                        'accent': '#f59e0b',
+                        'primary': '#3498db',
+                        'primary-dark': '#2980b9',
+                        'secondary': '#34495e',
+                        'accent': '#3498db',
                         'success': '#10b981',
                         'error': '#ef4444',
                         'warning': '#f59e0b',
-                        'info': '#3b82f6'
+                        'info': '#3498db'
                     },
                     animation: {
                         'float': 'float 3s ease-in-out infinite',
@@ -69,7 +69,7 @@
         .floating-label select:focus + label,
         .floating-label select:not([value=""]) + label {
             transform: translateY(-1.5rem) scale(0.875);
-            color: #6366f1;
+            color: #3498db;
         }
 
         .floating-label label {
@@ -91,7 +91,7 @@
 
         /* Gradient background */
         .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
         }
 
         /* Custom scrollbar */
@@ -105,30 +105,30 @@
         }
 
         .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #6366f1;
+            background: #3498db;
             border-radius: 3px;
         }
 
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #4f46e5;
+            background: #2980b9;
         }
 
         /* Input focus effects */
         .modern-input:focus {
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+            border-color: #3498db;
         }
 
         /* Submit button gradient */
         .btn-gradient {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             transition: all 0.3s ease;
         }
 
         .btn-gradient:hover {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            background: linear-gradient(135deg, #2980b9 0%, #2c3e50 100%);
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.4);
         }
 
         /* Card hover effect */
