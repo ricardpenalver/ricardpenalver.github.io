@@ -1002,6 +1002,17 @@ body {
     opacity: 0.8;
 }
 
+.footer-link {
+    color: var(--text-light);
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+.footer-link:hover {
+    opacity: 1;
+    color: var(--accent-color);
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -1343,7 +1354,7 @@ body {
 .cta-title {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
     color: white;
 }
 
