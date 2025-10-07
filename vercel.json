@@ -1,20 +1,30 @@
 {
-  "version": 2,
-  "name": "ricardpenalver-website",
-  "buildCommand": "",
+  "buildCommand": "echo 'No build required for static site'",
   "outputDirectory": ".",
-  "framework": null,
-  "installCommand": "",
-  "builds": [
+  "installCommand": "echo 'No dependencies to install'",
+  "headers": [
     {
-      "src": "**/*",
-      "use": "@vercel/static"
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "source": "/blog",
+      "destination": "/blog/index.html"
     }
   ]
 }

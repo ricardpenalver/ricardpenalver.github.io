@@ -1,3 +1,33 @@
+# Archivos de migración y herramientas
 gemfile.backup
 migration_tools/
+*.py
+*.xml
+requirements.txt
+__pycache__/
+
+# Archivos del sistema
 .DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# Scripts de deployment
+*.sh
+deploy-info.html
+deploy-trigger.txt
+vercel-redeploy-trigger.txt
+
+# Documentación de desarrollo
+CAMBIOS_FORMULARIO.md
+CLAUDE.md
+FORMULARIO_INTEGRACION.md
+README_VERCEL.md
+
+# Node modules (no necesarios para sitio estático)
+node_modules/
+package-lock.json
+
+# Git
+.git/
+.gitignore

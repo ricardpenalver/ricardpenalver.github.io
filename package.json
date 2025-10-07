@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "Sitio web personal de Ricardo Peñalver - Static HTML Site",
   "main": "index.html",
-  "type": "module",
   "scripts": {
-    "build": "echo 'Static HTML site - no build process required'",
-    "start": "echo 'Static HTML site - serve files directly'",
-    "vercel-build": "echo 'Static site deployment'"
+    "build": "echo 'Static HTML site - no build required'",
+    "start": "echo 'Use a static server to preview'"
   },
   "keywords": [
     "personal",
@@ -18,12 +16,5 @@
     "javascript"
   ],
   "author": "Ricardo Peñalver",
-  "license": "MIT",
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.19.1",
-    "shadcn-mcp": "^1.0.0"
-  }
+  "license": "MIT"
 }
