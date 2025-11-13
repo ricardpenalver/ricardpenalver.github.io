@@ -13,7 +13,8 @@ const blogArticles = [
         filename: "parar-para-reconectar-y-avanzar.html",
         excerpt: "Reflexiones sobre la importancia de hacer pausas en nuestra vida profesional para reconectar con nuestros objetivos...",
         date: "2025-01-15",
-        category: "Productividad"
+        category: "Productividad",
+        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=300&fit=crop&auto=format"
     },
     {
         title: "IAs generativas y productividad laboral",
@@ -272,7 +273,8 @@ const blogArticles = [
         filename: "11-años-de-el-mundo-girado.html",
         excerpt: "Análisis retrospectivo de cambios profesionales y personales a lo largo de una década. Reflexión sobre evolución tecnológica y transformación digital...",
         date: "2014-05-10",
-        category: "Reflexión"
+        category: "Reflexión",
+        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=300&fit=crop&auto=format"
     },
     {
         title: "Automatización de tareas Microsoft",
