@@ -1,11 +1,12 @@
 // Blog articles data with metadata
 const blogArticles = [
     {
-        title: "Esto no va de tecnología, es de personas",
+        title: "Esto no va de tecnología sino de personas",
         filename: "esto-no-va-de-tecnologia-es-de-personas.html",
         excerpt: "Reflexión sobre la importancia de la presencialidad y las conexiones humanas auténticas en un mundo cada vez más digital. La tecnología está para ayudarnos, nunca para sustituirnos...",
         date: "2025-11-14",
-        category: "Comunicación"
+        category: "Comunicación",
+        image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&h=300&fit=crop&auto=format"
     },
     {
         title: "Personalizando(me) mi programa formativo",
