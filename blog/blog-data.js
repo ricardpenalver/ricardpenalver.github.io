@@ -1,6 +1,13 @@
 // Blog articles data with metadata
 const blogArticles = [
     {
+        title: "Esto no va de tecnología, es de personas",
+        filename: "esto-no-va-de-tecnologia-es-de-personas.html",
+        excerpt: "Reflexión sobre la importancia de la presencialidad y las conexiones humanas auténticas en un mundo cada vez más digital. La tecnología está para ayudarnos, nunca para sustituirnos...",
+        date: "2025-11-14",
+        category: "Comunicación"
+    },
+    {
         title: "Personalizando(me) mi programa formativo",
         filename: "personalizando-mi-programa-formativo.html",
         excerpt: "Reflexiones sobre la educación personalizada y el uso de IA para crear programas formativos adaptados a las necesidades individuales. Del sistema tradicional memorístico a la formación a medida con inteligencia artificial...",
