@@ -6,7 +6,7 @@ const blogArticles = [
         excerpt: "Reflexión sobre la biografía de Jennifer Doudna escrita por Walter Isaacson. CRISPR, edición genética y las profundas cuestiones éticas sobre el futuro de la humanidad. Ciencia con conciencia humanista...",
         date: "2025-12-01",
         category: "Filosofía",
-        image: "/blog/codigo-vida.png"
+        image: "codigo-vida.png"
     },
     {
         title: "No es tiempo para humanistas",
@@ -14,7 +14,7 @@ const blogArticles = [
         excerpt: "En un momento de deslumbramiento tecnológico y seducción por la IA, reflexión sobre la importancia del humanismo, el pensamiento crítico y las humanidades para enfrentar los desafíos del futuro...",
         date: "2025-09-18",
         category: "Filosofía",
-        image: "/blog/no-tiempo-humanistas.png"
+        image: "no-tiempo-humanistas.png"
     },
     {
         title: "Esto no va de tecnología sino de personas",
