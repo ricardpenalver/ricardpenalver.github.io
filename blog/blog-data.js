@@ -1,6 +1,22 @@
 // Blog articles data with metadata
 const blogArticles = [
     {
+        title: "El código de la vida",
+        filename: "el-código-de-la-vida.html",
+        excerpt: "Reflexión sobre la biografía de Jennifer Doudna escrita por Walter Isaacson. CRISPR, edición genética y las profundas cuestiones éticas sobre el futuro de la humanidad. Ciencia con conciencia humanista...",
+        date: "2025-12-01",
+        category: "Filosofía",
+        image: "/blog/codigo-vida.png"
+    },
+    {
+        title: "No es tiempo para humanistas",
+        filename: "no-es-tiempo-para-humanistas.html",
+        excerpt: "En un momento de deslumbramiento tecnológico y seducción por la IA, reflexión sobre la importancia del humanismo, el pensamiento crítico y las humanidades para enfrentar los desafíos del futuro...",
+        date: "2025-09-18",
+        category: "Filosofía",
+        image: "/blog/no-tiempo-humanistas.png"
+    },
+    {
         title: "Esto no va de tecnología sino de personas",
         filename: "esto-no-va-de-tecnologia-es-de-personas.html",
         excerpt: "Reflexión sobre la importancia de la presencialidad y las conexiones humanas auténticas en un mundo cada vez más digital. La tecnología está para ayudarnos, nunca para sustituirnos...",
@@ -1049,44 +1065,44 @@ function createBlogCard(article) {
 
 function createPagination(currentPage, totalPages) {
     let paginationHTML = '<div class="pagination">';
-    
+
     // Previous button
     if (currentPage > 1) {
         paginationHTML += `<a href="#" class="pagination-btn" data-page="${currentPage - 1}">
             <i class="fas fa-chevron-left"></i> Anterior
         </a>`;
     }
-    
+
     // Page numbers
     const startPage = Math.max(1, currentPage - 2);
     const endPage = Math.min(totalPages, currentPage + 2);
-    
+
     if (startPage > 1) {
         paginationHTML += `<a href="#" class="pagination-btn" data-page="1">1</a>`;
         if (startPage > 2) {
             paginationHTML += '<span class="pagination-ellipsis">...</span>';
         }
     }
-    
+
     for (let i = startPage; i <= endPage; i++) {
         const activeClass = i === currentPage ? 'active' : '';
         paginationHTML += `<a href="#" class="pagination-btn ${activeClass}" data-page="${i}">${i}</a>`;
     }
-    
+
     if (endPage < totalPages) {
         if (endPage < totalPages - 1) {
             paginationHTML += '<span class="pagination-ellipsis">...</span>';
         }
         paginationHTML += `<a href="#" class="pagination-btn" data-page="${totalPages}">${totalPages}</a>`;
     }
-    
+
     // Next button
     if (currentPage < totalPages) {
         paginationHTML += `<a href="#" class="pagination-btn" data-page="${currentPage + 1}">
             Siguiente <i class="fas fa-chevron-right"></i>
         </a>`;
     }
-    
+
     paginationHTML += '</div>';
     return paginationHTML;
 }
@@ -1094,19 +1110,19 @@ function createPagination(currentPage, totalPages) {
 function renderBlog(page = 1) {
     const articles = getArticlesForPage(page);
     const totalPages = getTotalPages();
-    
+
     // Render articles
     const blogGrid = document.querySelector('.blog-grid');
     if (blogGrid) {
         blogGrid.innerHTML = articles.map(createBlogCard).join('');
     }
-    
+
     // Render pagination
     const paginationContainer = document.querySelector('.pagination-container');
     if (paginationContainer) {
         paginationContainer.innerHTML = createPagination(page, totalPages);
     }
-    
+
     // Update URL without page reload
     const url = new URL(window.location);
     url.searchParams.set('page', page);
@@ -1114,22 +1130,22 @@ function renderBlog(page = 1) {
 }
 
 // Initialize blog when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const currentPage = parseInt(urlParams.get('page')) || 1;
     renderBlog(currentPage);
-    
+
     // Add event listeners for pagination
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         if (e.target.closest('.pagination-btn')) {
             e.preventDefault();
             const page = parseInt(e.target.closest('.pagination-btn').dataset.page);
             if (page) {
                 renderBlog(page);
                 // Scroll to top of blog section
-                document.querySelector('.blog-grid').scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'start' 
+                document.querySelector('.blog-grid').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
             }
         }
