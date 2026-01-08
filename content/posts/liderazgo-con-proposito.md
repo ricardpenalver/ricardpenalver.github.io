@@ -1,0 +1,65 @@
+---
+title: Liderazgo con propósito
+date: 2025-06-01
+category: Liderazgo
+slug: liderazgo-con-proposito
+excerpt: "Análisis del liderazgo moderno basado en 'La Apple de Tim Cook' de Leander Kahney. Principios de liderazgo centrado en valores y propósito organizacional..."
+---
+
+Acabo de terminar de leer el libro *La Apple de Tim Cook* de Leander Kahney.
+
+Para los que no lo sepan aún, soy lo que muchas personas etiquetan como un fan de Apple. 
+
+La biografía, es un tipo de libro que me encanta leer. Conocer con detalle la vida de personalidades en profundidad me permite tener una opinión de ellos mucho más amplia y personal, alejada de los titulares que esas personas suscitan para los medios de comunicación.
+
+Aunque en este caso no se trate estrictamente de una biografía, porque se centra en la parte de la trayectoria profesional de Tim Cook en Apple, para entender su impronta en la empresa el autor necesita hablar de la persona, de su historia y trayectoria anterior, ayudando al lector a entender los porqués de lo que ha hecho en la compañía de la manzana desde que tomó las riendas tras el fallecimiento de Steve Jobs.
+
+**El objeto del libro**
+
+*La Apple de Tim Cook* es una biografía corporativa que explora el impacto que ha tenido Tim Cook tras la muerte de Steve Jobs en 2011.
+
+Contra la opinión de muchos, tras el fallecimiento del icónico personaje, Tim Cook llevó a Apple a nuevas alturas, superando el escepticismo inicial sobre su capacidad para suceder a un ícono de la Sociedad como Steve Jobs. 
+
+Bajo su liderazgo, Apple se convirtió en la primera empresa en alcanzar una capitalización de un billón de dólares, duplicando ingresos y expandiendo su presencia global, especialmente en China. Cook diversificó las fuentes de ingresos de Apple, impulsando servicios como Apple Music y la App Store, mientras optimizaba la cadena de suministro para satisfacer la demanda global sin sacrificar eficiencia.
+
+Su enfoque metódico, forjado en su experiencia en gestión de operaciones en IBM y Compaq, y su compromiso con valores como la transparencia, la inclusión y la responsabilidad social, dejaron en evidencia los vaticinios del inminente ocaso que iba a sufrir la compañía de la manzana tras el fallecimiento de Steve Jobs.
+
+Bajo el mandato de Tim Cook, productos como el iPhone no sólo tuvieron continuidad, sino que han sido capaces de alcanzar cotas de penetración que han superado cualquier vaticinio, gracias a la innovación y a la visión que hay detrás del diseño de sus productos.
+
+**Los valores generan un propósito**
+
+El autor utiliza información privilegiada y hace un exhaustivo trabajo periodístico para señalar al lector detalles que ahondan en el liderazgo discreto pero efectivo de Tim Cook.
+
+De él destaca sus valores personales, y como éstos han impregnado un “alma” a los productos de Apple, y a la propia compañía, trascendiendo a todo para impactar en áreas como la sostenibilidad, la solidaridad y la ética con una visión 360º.
+
+Uno de los pilares de Cook que más se destaca en el libro es su compromiso con la sostenibilidad. 
+
+Apple, bajo su dirección, ha priorizado la neutralidad en emisiones de carbono para 2030, invirtiendo en energías renovables y productos altamente reciclables. Este enfoque refleja su creencia de que las empresas deben contribuir al bienestar del planeta, dando a los productos de Apple un propósito más allá de la tecnología. 
+
+Además, Tim Cook transformó e innovó en la cadena de suministro, implementando auditorías rigurosas para garantizar condiciones laborales éticas, especialmente en regiones como China, donde la compañía se enfrentó a críticas y tensiones geopolíticas.
+
+La solidaridad es otro valor central de Cook. Como defensor de los derechos LGBTQ+ y la diversidad en el lugar de trabajo, ha fomentado una cultura inclusiva en Apple, alejándose de las carencias humanas que el autor identifica en la era de Jobs.
+
+Este liderazgo humano ha permitido que los productos de Apple no solo sean innovadores, sino que resuenen emocionalmente en los usuarios, por cuanto están dotados de un “alma” en la que se reflejan valores universales.
+
+**La privacidad del usuario no es negociable**
+
+Su postura firme en la privacidad del usuario, como en el caso del iPhone de uno de los autores de la matanza de San Bernardino, subraya su compromiso con principios éticos, incluso a costa de controversias. 
+
+Mantenerse firme frente a la petición del FBI en este caso fue un signo de valentía y un ejemplo de la lucha por uno de los elementos más amenazadores de la sociedad de la información: la privacidad.
+
+El FBI le pidió hackear el teléfono para permitir instalar en el terminal una aplicación para descifrar la contraseña del móvil sin que se bloqueara. Tim Cook sostuvo que si lo permite se habría creado una potencial amenaza para a privacidad de 1.000 millones de terminales. 
+
+Este enfrentamiento suponía un gran desgaste, pero desde el primer momento se mantuvo firme en su postura de no ceder. La libertad de muchas personas estaba amenazada y no dudó. Continuó negándose, a pesar de todas las presiones para ceder, y el FBI finalmente retiró la demanda*.
+
+Ante la negativa de Apple, el FBI pagó 900.000 $ a una empresa israelí que consiguió obtener toda la información del terminal, en el que no se encontró nada que aportara datos a la investigación.
+
+**Conclusión**
+
+*La Apple de Tim Cook* muestra a la persona como un líder reservado, pero profundamente ético, y que ha redefinido el éxito corporativo de la compañía, respetado el legado de Jobs sin tratar de imitarlo, y consiguiendo fortalecer a Apple desde sus valores, haciendo que sus productos trascendieran por su impacto en el medio ambiente, la justicia social y la humanidad.
+
+Personalmente creo que este libro es una inspiración para quienes pensamos que el liderazgo con propósito tiene un efecto transformador en las empresas, por cuanto impactan en las vidas de las personas que trabajan en ellas y en los agentes con los que se relacionan.
+
+Que una empresa pueda cumplir sus objetivos, y hacerlo de forma sostenible, generando un impacto positivo en su entorno y obligando a otros a adoptar medidas similares para no quedarse fuera de los valores de una sociedad, es posible.
+
+Y como ocurre con sus innovaciones, Apple es ejemplo para muchas empresas, de su sector y de otros, que espero que pronto añadan a su propósito valores similares para contribuir entre todas a hacer un mundo mejor.

@@ -1,0 +1,29 @@
+# Configuración de Decap CMS para el blog de Ricardo Peñalver
+
+# Backend local para desarrollo
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Carpeta de medios
+media_folder: "assets/images/blog"
+public_folder: "/assets/images/blog"
+
+# Colecciones de contenido
+collections:
+  - name: "posts"
+    label: "Posts del Blog"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Categoría", name: "category", widget: "string" }
+      - { label: "Resumen", name: "excerpt", widget: "text", required: false }
+      - { label: "Imagen", name: "image", widget: "image", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
