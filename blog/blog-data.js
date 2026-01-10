@@ -1,6 +1,6 @@
 // Blog articles data - Generado automáticamente
-// Última actualización: 2026-01-10T15:15:30.066Z
-// Total de posts: 89
+// Última actualización: 2026-01-10T15:18:54.697Z
+// Total de posts: 83
 
 const blogArticles = [
     {
@@ -10,54 +10,6 @@ const blogArticles = [
         "date": "2026-01-10",
         "category": "reflexiones",
         "image": "/assets/images/blog/la-dimension-social-de-la-formacion.png"
-    },
-    {
-        "title": "3 de junio 2004",
-        "filename": "3-de-junio-2004.html",
-        "excerpt": "Locución de Ricardo Peñalver García en Radio Praga",
-        "date": "2026-01-08",
-        "category": "Sin categoría",
-        "image": null
-    },
-    {
-        "title": "Custom Styles",
-        "filename": "custom-styles.html",
-        "excerpt": "{\"version\": 3, \"isGlobalStylesUserThemeJSON\": true }",
-        "date": "2026-01-08",
-        "category": "Sin categoría",
-        "image": null
-    },
-    {
-        "title": "Gemini_Generated_Image_hpot94hpot94hpot",
-        "filename": "gemini-generated-image-hpot94hpot94hpot.html",
-        "excerpt": "Espacio de formación presencial en un entorno digital",
-        "date": "2026-01-08",
-        "category": "Sin categoría",
-        "image": null
-    },
-    {
-        "title": "Gracias",
-        "filename": "gracias.html",
-        "excerpt": "El agradecimiento como señal de respeto por el otro",
-        "date": "2026-01-08",
-        "category": "Sin categoría",
-        "image": null
-    },
-    {
-        "title": "libro_abierto",
-        "filename": "libro-abierto.html",
-        "excerpt": "Analogía de la vida como un libro con una sucesión de capítulos y páginas por escribir",
-        "date": "2026-01-08",
-        "category": "Sin categoría",
-        "image": null
-    },
-    {
-        "title": "Portada-Elmundogirado",
-        "filename": "portada-elmundogirado.html",
-        "excerpt": "Revisitando los temas que fueron actualidad en el mundo de Wayne",
-        "date": "2026-01-08",
-        "category": "Sin categoría",
-        "image": null
     },
     {
         "title": "El código de la vida",
