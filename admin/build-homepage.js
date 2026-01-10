@@ -14,10 +14,10 @@ const INDEX_FILE = path.join(__dirname, '..', 'index.html');
 function parseFrontmatter(content) {
     const match = content.match(/^---\n([\s\S]*?)\n---/);
     if (!match) return { meta: {}, body: content };
-    
+
     const meta = {};
     const lines = match[1].split('\n');
-    
+
     for (const line of lines) {
         const colonIdx = line.indexOf(':');
         if (colonIdx > 0) {
@@ -30,7 +30,7 @@ function parseFrontmatter(content) {
             meta[key] = value;
         }
     }
-    
+
     const body = content.substring(match[0].length).trim();
     return { meta, body };
 }
@@ -45,7 +45,7 @@ function generateExcerpt(body, maxLength = 120) {
         .replace(/!\[[^\]]*\]\([^)]+\)/g, '')
         .replace(/\n+/g, ' ')
         .trim();
-    
+
     if (text.length > maxLength) {
         text = text.substring(0, maxLength) + '...';
     }
@@ -55,7 +55,7 @@ function generateExcerpt(body, maxLength = 120) {
 // Formatear fecha para mostrar
 function formatDate(dateStr) {
     const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
-                    'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+        'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
     const date = new Date(dateStr);
     return `${months[date.getMonth()]} ${date.getFullYear()}`;
 }
@@ -63,25 +63,33 @@ function formatDate(dateStr) {
 // Obtener los 3 posts más recientes
 function getLatestPosts(count = 3) {
     const files = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.md'));
-    
+
     const posts = files.map(file => {
         const filePath = path.join(POSTS_DIR, file);
         const content = fs.readFileSync(filePath, 'utf8');
         const { meta, body } = parseFrontmatter(content);
-        
+
+        // Determinar la ruta de la imagen
+        let imagePath = meta.image || '';
+        if (imagePath && !imagePath.startsWith('http') && !imagePath.startsWith('/')) {
+            imagePath = `/blog/${imagePath}`;
+        } else if (!imagePath) {
+            imagePath = 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=300&fit=crop&auto=format';
+        }
+
         return {
             title: meta.title || 'Sin título',
             slug: meta.slug || file.replace('.md', ''),
             date: meta.date || '1970-01-01',
             excerpt: meta.excerpt || generateExcerpt(body),
-            image: meta.image || 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=300&fit=crop&auto=format',
+            image: imagePath,
             category: meta.category || 'General'
         };
     });
-    
+
     // Ordenar por fecha descendente
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-    
+
     return posts.slice(0, count);
 }
 
@@ -102,33 +110,33 @@ function generateBlogCard(post) {
 // Actualizar index.html
 function updateHomepage() {
     console.log('🏠 Actualizando homepage con posts recientes...\n');
-    
+
     const posts = getLatestPosts(3);
     console.log('📝 Posts más recientes:');
     posts.forEach((p, i) => console.log(`   ${i + 1}. ${p.title} (${p.date})`));
-    
+
     // Generar HTML de los blog cards
     const blogCardsHtml = posts.map(generateBlogCard).join('\n');
-    
+
     // Leer index.html
     let indexHtml = fs.readFileSync(INDEX_FILE, 'utf8');
-    
+
     // Buscar y reemplazar la sección de blog-grid
     const blogGridRegex = /(<div class="blog-grid">)([\s\S]*?)(<\/div>\s*<div class="blog-cta">)/;
     const match = indexHtml.match(blogGridRegex);
-    
+
     if (!match) {
         console.error('❌ No se encontró la sección blog-grid en index.html');
         return false;
     }
-    
+
     const newBlogSection = `$1\n${blogCardsHtml}\n                $3`;
     indexHtml = indexHtml.replace(blogGridRegex, newBlogSection);
-    
+
     // Guardar index.html
     fs.writeFileSync(INDEX_FILE, indexHtml, 'utf8');
     console.log('\n✅ index.html actualizado con los 3 posts más recientes');
-    
+
     return true;
 }
 
