@@ -1,8 +1,16 @@
 // Blog articles data - Generado automáticamente
-// Última actualización: 2026-01-08T21:11:21.753Z
-// Total de posts: 88
+// Última actualización: 2026-01-10T10:53:00.554Z
+// Total de posts: 89
 
 const blogArticles = [
+    {
+        "title": "La dimensión social de la formación",
+        "filename": "la-dimensión-social-de-la-formación.html",
+        "excerpt": "Enseñar algo a alguien es, ante todo, un acto de generosidad. Compartir tu conocimiento con otra persona, independientemente de la complejidad del conocimiento, es uno de los mayores beneficios que di...",
+        "date": "2026-01-10",
+        "category": "reflexiones",
+        "image": "/assets/images/blog/la-dimension-social-de-la-formacion.png"
+    },
     {
         "title": "3 de junio 2004",
         "filename": "3-de-junio-2004.html",
