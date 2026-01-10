@@ -39,5 +39,19 @@ try {
 }
 
 console.log('\n' + '═'.repeat(50));
+
+// Paso 3: Actualizar homepage
+console.log('\n🏠 Paso 3: Actualizando homepage...\n');
+try {
+    execSync(`node "${path.join(ADMIN_DIR, 'build-homepage.js')}"`, {
+        stdio: 'inherit',
+        cwd: ADMIN_DIR
+    });
+} catch (e) {
+    console.error('❌ Error en build-homepage.js');
+    process.exit(1);
+}
+
+console.log('\n' + '═'.repeat(50));
 console.log('\n✨ Build completado exitosamente!');
 console.log('\n💡 Próximo paso: git add . && git commit -m "Build" && git push\n');

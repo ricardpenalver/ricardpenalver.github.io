@@ -1,5 +1,5 @@
 // Blog articles data - Generado automáticamente
-// Última actualización: 2026-01-10T10:53:00.554Z
+// Última actualización: 2026-01-10T15:15:30.066Z
 // Total de posts: 89
 
 const blogArticles = [
