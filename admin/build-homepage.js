@@ -60,14 +60,21 @@ function formatDate(dateStr) {
     return `${months[date.getMonth()]} ${date.getFullYear()}`;
 }
 
-// Obtener los 3 posts más recientes
+// Obtener los 3 posts más recientes (excluyendo borradores)
 function getLatestPosts(count = 3) {
     const files = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.md'));
 
-    const posts = files.map(file => {
+    const posts = [];
+
+    for (const file of files) {
         const filePath = path.join(POSTS_DIR, file);
         const content = fs.readFileSync(filePath, 'utf8');
         const { meta, body } = parseFrontmatter(content);
+
+        // Ignorar posts marcados como borrador
+        if (meta.draft === 'true' || meta.draft === true) {
+            continue;
+        }
 
         // Determinar la ruta de la imagen
         let imagePath = meta.image || '';
@@ -77,15 +84,15 @@ function getLatestPosts(count = 3) {
             imagePath = 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=300&fit=crop&auto=format';
         }
 
-        return {
+        posts.push({
             title: meta.title || 'Sin título',
             slug: meta.slug || file.replace('.md', ''),
             date: meta.date || '1970-01-01',
             excerpt: meta.excerpt || generateExcerpt(body),
             image: imagePath,
             category: meta.category || 'General'
-        };
-    });
+        });
+    }
 
     // Ordenar por fecha descendente
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));

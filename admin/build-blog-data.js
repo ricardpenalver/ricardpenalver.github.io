@@ -67,11 +67,19 @@ function buildBlogData() {
     console.log(`📁 Encontrados ${files.length} archivos .md\n`);
 
     const articles = [];
+    let draftsCount = 0;
 
     for (const file of files) {
         const filePath = path.join(POSTS_DIR, file);
         const content = fs.readFileSync(filePath, 'utf8');
         const { meta, body } = parseFrontmatter(content);
+
+        // Ignorar posts marcados como borrador
+        if (meta.draft === 'true' || meta.draft === true) {
+            draftsCount++;
+            console.log(`   📝 Borrador ignorado: ${meta.title || file}`);
+            continue;
+        }
 
         const slug = meta.slug || file.replace('.md', '');
 
@@ -83,6 +91,10 @@ function buildBlogData() {
             category: meta.category || 'Sin categoría',
             image: meta.image || null
         });
+    }
+
+    if (draftsCount > 0) {
+        console.log(`\n📋 ${draftsCount} borrador(es) ignorado(s)\n`);
     }
 
     // Ordenar por fecha descendente
